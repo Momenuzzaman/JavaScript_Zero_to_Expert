@@ -39,16 +39,36 @@
 // console.log('averageAge :', averageAge, 'Emon :', ageEmon, 'Liton', ageLiton);
 
 // template literals
-const name = 'Emon';
-const job = 'student';
-const birthYear = 1998;
-const now = 2022;
-const age = now - birthYear;
-// console.log(age);
 
-console.log(`I am ${name}, a ${age} year old ${job} `);
-console.log(`String with 
-multiple
-line`)
+// const name = 'Emon';
+// const job = 'student';
+// const birthYear = 1998;
+// const now = 2022;
+// const age = now - birthYear;
+// // console.log(age);
 
+// console.log(`I am ${name}, a ${age} year old ${job} `);
+// console.log(`String with 
+// multiple
+// line`)
 
+// if else
+
+const age = 15;
+if (age >= 18) {
+    console.log(`Emon can start driving license`)
+}
+else {
+    const young = 18 - age;
+    console.log(`Emon is too young. wait another ${young} years.`);
+}
+
+const birthYear = 2001;
+let century
+if (birthYear <= 2000) {
+    century = 20;
+}
+else {
+    century = 21;
+}
+console.log(century);
