@@ -12,9 +12,11 @@ const firstName = 'Md';
 const lastName = 'Momenuzzaman';
 // console.log(firstName + ' ' + lastName);
 
+//Assignment Operator 
 let x = 10 + 10;
 x += 20;   // x + 10 = 40
 x -= 10;  // x - 10 = 30
 x++;     // x + 1 = 31
 x--;   // x - 1 = 30
-// console.log(x)
+x *= 5;
+console.log(x)
