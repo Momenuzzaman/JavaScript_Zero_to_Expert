@@ -3,9 +3,9 @@
 
 // const birthYear = 1998;
 
-const now = 2022
-let ageEmon = now - 1998;
-let ageLiton = now - 1984;
+// const now = 2022
+// let ageEmon = now - 1998;
+// let ageLiton = now - 1984;
 // // console.log(ageEmon, ageLiton);
 
 // const firstName = 'Md';
@@ -24,3 +24,16 @@ let ageLiton = now - 1984;
 
 // console.log(ageLiton > ageEmon)
 // console.log(ageLiton < ageEmon)
+
+// let x, y;
+
+// x = y = 10 + 25;
+// console.log(x, y);
+
+
+const now = 2022
+let ageEmon = now - 1998;
+let ageLiton = now - 1984;
+
+const averageAge = (ageEmon + ageLiton) / 2;
+console.log('averageAge :', averageAge, 'Emon :', ageEmon, 'Liton', ageLiton);
