@@ -31,9 +31,24 @@
 // console.log(x, y);
 
 
-const now = 2022
-let ageEmon = now - 1998;
-let ageLiton = now - 1984;
+// const now = 2022
+// let ageEmon = now - 1998;
+// let ageLiton = now - 1984;
 
-const averageAge = (ageEmon + ageLiton) / 2;
-console.log('averageAge :', averageAge, 'Emon :', ageEmon, 'Liton', ageLiton);
+// const averageAge = (ageEmon + ageLiton) / 2;
+// console.log('averageAge :', averageAge, 'Emon :', ageEmon, 'Liton', ageLiton);
+
+// template literals
+const name = 'Emon';
+const job = 'student';
+const birthYear = 1998;
+const now = 2022;
+const age = now - birthYear;
+// console.log(age);
+
+console.log(`I am ${name}, a ${age} year old ${job} `);
+console.log(`String with 
+multiple
+line`)
+
+
