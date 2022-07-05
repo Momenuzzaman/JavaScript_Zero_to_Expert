@@ -48,27 +48,48 @@
 // // console.log(age);
 
 // console.log(`I am ${name}, a ${age} year old ${job} `);
-// console.log(`String with 
+// console.log(`String with
 // multiple
 // line`)
 
 // if else
 
-const age = 15;
-if (age >= 18) {
-    console.log(`Emon can start driving license`)
-}
-else {
-    const young = 18 - age;
-    console.log(`Emon is too young. wait another ${young} years.`);
-}
+// const age = 15;
+// if (age >= 18) {
+//     console.log(`Emon can start driving license`)
+// }
+// else {
+//     const young = 18 - age;
+//     console.log(`Emon is too young. wait another ${young} years.`);
+// }
 
-const birthYear = 2001;
-let century
-if (birthYear <= 2000) {
-    century = 20;
-}
-else {
-    century = 21;
-}
-console.log(century);
+// const birthYear = 2001;
+// let century
+// if (birthYear <= 2000) {
+//     century = 20;
+// }
+// else {
+//     century = 21;
+// }
+// console.log(century);
+
+
+// type conversion
+// const inputYear = "1998";
+// console.log(Number(inputYear), inputYear);
+// console.log(Number(inputYear) + 10);
+
+// const name = 'Emon';
+// console.log(Number(name) + 2);
+
+// // type coercion
+// console.log('I am 24 years old')
+// console.log('1012' + 10);
+// console.log('100' - 1);
+// console.log('30' / 3);
+// console.log('40' * 4);
+
+// let n = '1' + 1; // = 11
+// n = n - 1;
+// console.log(n) 
+
