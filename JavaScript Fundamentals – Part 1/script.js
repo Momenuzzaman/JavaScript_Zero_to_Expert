@@ -97,23 +97,36 @@
 // truthy and falsy
 
 // five falsy  values : 0,null,NaN,undefined,''
-console.log(Boolean(0));
-console.log(Boolean(undefined));
-console.log(Boolean('Emon'));
-console.log(Boolean({}));
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean('Emon'));
+// console.log(Boolean({}));
 
-const money = 0;
-if (money) {
-    console.log("Don't spend it all")
+// const money = 0;
+// if (money) {
+//     console.log("Don't spend it all")
+// }
+// else {
+//     console.log("You should gate a gob")
+// };
+
+// let height = 0;
+// if (height) {
+//     console.log("YaY! Height is defined")
+// }
+// else {
+//     console.log("Height is not defined")
+// }
+
+const favorite = Number(prompt("What is your favorite number?"));
+console.log(favorite);
+
+if (favorite === 10) {
+    console.log("10 is an amazing number ")
+}
+else if (favorite === 7) {
+    console.log("7 is an amazing number ")
 }
 else {
-    console.log("You should gate a gob")
-};
-
-let height = 0;
-if (height) {
-    console.log("YaY! Height is defined")
-}
-else {
-    console.log("Height is not defined")
+    console.log("number is not 10 or 7")
 }
