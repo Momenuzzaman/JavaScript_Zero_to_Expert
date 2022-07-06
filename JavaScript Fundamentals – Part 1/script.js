@@ -131,17 +131,26 @@
 //     console.log("number is not 10 or 7")
 // }
 
-const hasDriversLicense = true;
-const hasGoodVision = false;
+// const hasDriversLicense = true;
+// const hasGoodVision = false;
 
-console.log(hasDriversLicense && hasGoodVision);
-console.log(hasDriversLicense || hasGoodVision);
-console.log(!hasGoodVision);
-console.log(!hasDriversLicense);
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasGoodVision);
+// console.log(!hasDriversLicense);
 
-if (hasDriversLicense && hasGoodVision) {
-    console.log("Emon is able to drive")
-}
-else {
-    console.log("Emon is not able to drive")
-}
+// if (hasDriversLicense && hasGoodVision) {
+//     console.log("Emon is able to drive")
+// }
+// else {
+//     console.log("Emon is not able to drive")
+// }
+
+
+const age = 22;
+
+age >= 18 ? console.log("I like to drink a beer") : console.log("I like to drink a water");
+
+let drink;
+age >= 18 ? drink = "Beer" : drink = "Water";
+console.log(drink)
