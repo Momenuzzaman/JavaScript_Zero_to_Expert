@@ -22,3 +22,13 @@ function calcAge(birthYear) {
 }
 const emonAge = calcAge(1998);
 console.log(emonAge);
+
+// function expiration
+
+const calcAge2 = function (birthYear) {
+    const currentYEar = 2022;
+    const age = currentYEar - birthYear;
+    return age;
+}
+const litonAge = calcAge2(1984);
+console.log(litonAge);
