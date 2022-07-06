@@ -91,7 +91,7 @@
 
 // let n = '1' + 1; // = 11
 // n = n - 1;
-// console.log(n) 
+// console.log(n)
 
 
 // truthy and falsy
@@ -118,15 +118,30 @@
 //     console.log("Height is not defined")
 // }
 
-const favorite = Number(prompt("What is your favorite number?"));
-console.log(favorite);
+// const favorite = Number(prompt("What is your favorite number?"));
+// console.log(favorite);
 
-if (favorite === 10) {
-    console.log("10 is an amazing number ")
-}
-else if (favorite === 7) {
-    console.log("7 is an amazing number ")
+// if (favorite === 10) {
+//     console.log("10 is an amazing number ")
+// }
+// else if (favorite === 7) {
+//     console.log("7 is an amazing number ")
+// }
+// else {
+//     console.log("number is not 10 or 7")
+// }
+
+const hasDriversLicense = true;
+const hasGoodVision = false;
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasGoodVision);
+console.log(!hasDriversLicense);
+
+if (hasDriversLicense && hasGoodVision) {
+    console.log("Emon is able to drive")
 }
 else {
-    console.log("number is not 10 or 7")
+    console.log("Emon is not able to drive")
 }
