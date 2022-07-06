@@ -14,21 +14,38 @@
 // console.log(orangeAndAppleJuice)
 
 
-// function declaration 
-function calcAge(birthYear) {
+// function declaration
+// function calcAge(birthYear) {
+//     const currentYEar = 2022;
+//     const age = currentYEar - birthYear;
+//     return age;
+// }
+// const emonAge = calcAge(1998);
+// console.log(emonAge);
+
+// // function expiration
+
+// const calcAge2 = function (birthYear) {
+//     const currentYEar = 2022;
+//     const age = currentYEar - birthYear;
+//     return age;
+// }
+// const litonAge = calcAge2(1984);
+// console.log(litonAge);
+
+// arrow function 
+
+const calcAge3 = (birthYear) => {
     const currentYEar = 2022;
     const age = currentYEar - birthYear;
     return age;
 }
-const emonAge = calcAge(1998);
-console.log(emonAge);
+console.log(calcAge3(1984));
 
-// function expiration
-
-const calcAge2 = function (birthYear) {
+const retirement = (birthYear) => {
     const currentYEar = 2022;
     const age = currentYEar - birthYear;
-    return age;
-}
-const litonAge = calcAge2(1984);
-console.log(litonAge);
+    const retirement = 65 - age;
+    return retirement
+};
+console.log(retirement(1998));
