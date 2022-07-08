@@ -70,10 +70,25 @@
 
 // array
 
-const friends = ['emon', 'liton', 'al-amin'];
-console.log(friends);
+// const friends = ['emon', 'liton', 'al-amin'];
+// console.log(friends);
 
-console.log(friends[2])
+// console.log(friends[2])
 
-friends[2] = 'joy';
-console.log(friends)
+// friends[2] = 'joy';
+// console.log(friends)
+
+// Exercise 
+
+const calcAge = (birthYear) => {
+    return 2050 - birthYear
+};
+
+const year = [1999, 2001, 184];
+const age1 = calcAge(year[0]);
+const age2 = calcAge(year[1]);
+const age3 = calcAge(year[2]);
+console.log(age1, age2, age3);
+
+const age = [age1, age2, age3];
+console.log(age)
