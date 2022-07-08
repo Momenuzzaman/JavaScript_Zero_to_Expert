@@ -53,16 +53,16 @@
 
 // function calls other function
 
-const cutFruit = fruit => {
-    return fruit * 4;
-}
+// const cutFruit = fruit => {
+//     return fruit * 4;
+// }
 
-const fruitProcessor = (apple, orange) => {
-    const appleCut = cutFruit(apple);
-    const orangeCut = cutFruit(orange);
+// const fruitProcessor = (apple, orange) => {
+//     const appleCut = cutFruit(apple);
+//     const orangeCut = cutFruit(orange);
 
-    const juice = `Juice with ${appleCut} piece of apple and ${orangeCut} piece of orange`;
-    return juice;
-}
+//     const juice = `Juice with ${appleCut} piece of apple and ${orangeCut} piece of orange`;
+//     return juice;
+// }
 
-console.log(fruitProcessor(5, 3));
+// console.log(fruitProcessor(5, 3));
