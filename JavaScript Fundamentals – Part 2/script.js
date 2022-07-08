@@ -66,3 +66,14 @@
 // }
 
 // console.log(fruitProcessor(5, 3));
+
+
+// array
+
+const friends = ['emon', 'liton', 'al-amin'];
+console.log(friends);
+
+console.log(friends[2])
+
+friends[2] = 'joy';
+console.log(friends)

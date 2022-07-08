@@ -17,5 +17,5 @@ const checkWinner = (avgDolphins, avgKoalas) => {
     }
 }
 
-checkWinner(avgDolphins, avgKoalas)
+checkWinner(avgDolphins, avgKoalas);
 
