@@ -33,19 +33,36 @@
 // const litonAge = calcAge2(1984);
 // console.log(litonAge);
 
-// arrow function 
+// arrow function
 
-const calcAge3 = (birthYear) => {
-    const currentYEar = 2022;
-    const age = currentYEar - birthYear;
-    return age;
+// const calcAge3 = (birthYear) => {
+//     const currentYEar = 2022;
+//     const age = currentYEar - birthYear;
+//     return age;
+// }
+// console.log(calcAge3(1984));
+
+// const retirement = (birthYear) => {
+//     const currentYEar = 2022;
+//     const age = currentYEar - birthYear;
+//     const retirement = 65 - age;
+//     return retirement
+// };
+// console.log(retirement(1998));
+
+
+// function calls other function
+
+const cutFruit = fruit => {
+    return fruit * 4;
 }
-console.log(calcAge3(1984));
 
-const retirement = (birthYear) => {
-    const currentYEar = 2022;
-    const age = currentYEar - birthYear;
-    const retirement = 65 - age;
-    return retirement
-};
-console.log(retirement(1998));
+const fruitProcessor = (apple, orange) => {
+    const appleCut = cutFruit(apple);
+    const orangeCut = cutFruit(orange);
+
+    const juice = `Juice with ${appleCut} piece of apple and ${orangeCut} piece of orange`;
+    return juice;
+}
+
+console.log(fruitProcessor(5, 3));
