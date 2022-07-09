@@ -80,15 +80,30 @@
 
 // Exercise 
 
-const calcAge = (birthYear) => {
-    return 2050 - birthYear
-};
+// const calcAge = (birthYear) => {
+//     return 2050 - birthYear
+// };
 
-const year = [1999, 2001, 184];
-const age1 = calcAge(year[0]);
-const age2 = calcAge(year[1]);
-const age3 = calcAge(year[2]);
-console.log(age1, age2, age3);
+// const year = [1999, 2001, 184];
+// const age1 = calcAge(year[0]);
+// const age2 = calcAge(year[1]);
+// const age3 = calcAge(year[2]);
+// console.log(age1, age2, age3);
 
-const age = [age1, age2, age3];
-console.log(age)
+// const age = [age1, age2, age3];
+// console.log(age)
+
+const friends = ['Emon', 'Liton', 'Easin'];
+console.log(friends);
+
+friends.push('Ayaan')
+console.log(friends);
+
+friends.unshift('Rabu');
+console.log(friends);
+
+friends.pop();
+console.log(friends);
+
+friends.shift();
+console.log(friends);
