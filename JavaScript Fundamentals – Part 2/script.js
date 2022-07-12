@@ -107,3 +107,12 @@
 
 // friends.shift();
 // console.log(friends);
+
+const emon = {
+    firstName: 'Md',
+    lastName: 'Emon',
+    job: "student",
+    friends: ['Anik', 'Sagor', 'Bappy']
+};
+
+console.log(emon.firstName, emon.lastName);
