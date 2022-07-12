@@ -108,11 +108,42 @@
 // friends.shift();
 // console.log(friends);
 
+// const emon = {
+//     firstName: 'Md',
+//     lastName: 'Emon',
+//     birthYear: 1998,
+//     job: "student",
+//     friends: ['Anik', 'Sagor', 'Bappy']
+// };
+
+// console.log(emon.firstName, emon.lastName);
+
+
 const emon = {
     firstName: 'Md',
     lastName: 'Emon',
+    birthYear: 1998,
     job: "student",
-    friends: ['Anik', 'Sagor', 'Bappy']
-};
+    friends: ['Anik', 'Sagor', 'Bappy'],
+    drivingLicense: true,
 
-console.log(emon.firstName, emon.lastName);
+    // calcAge: function () {
+    //     return 2022 - this.birthYear;
+    // }
+    calcAge: function () {
+        this.age = 2022 - this.birthYear;
+        console.log(this);
+        return this.age;
+    },
+
+    emonDetail: function () {
+        return `${this.lastName} a ${this.calcAge()} year old ${this.job} and he has ${this.drivingLicense ? 'a' : no} driving license`;
+    }
+};
+// console.log(emon.age);
+
+console.log(emon.calcAge());
+console.log(emon.age);
+console.log(emon.emonDetail());
+
+
