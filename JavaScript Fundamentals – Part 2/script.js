@@ -119,31 +119,31 @@
 // console.log(emon.firstName, emon.lastName);
 
 
-const emon = {
-    firstName: 'Md',
-    lastName: 'Emon',
-    birthYear: 1998,
-    job: "student",
-    friends: ['Anik', 'Sagor', 'Bappy'],
-    drivingLicense: true,
+// const emon = {
+//     firstName: 'Md',
+//     lastName: 'Emon',
+//     birthYear: 1998,
+//     job: "student",
+//     friends: ['Anik', 'Sagor', 'Bappy'],
+//     drivingLicense: true,
 
-    // calcAge: function () {
-    //     return 2022 - this.birthYear;
-    // }
-    calcAge: function () {
-        this.age = 2022 - this.birthYear;
-        console.log(this);
-        return this.age;
-    },
+//     // calcAge: function () {
+//     //     return 2022 - this.birthYear;
+//     // }
+//     calcAge: function () {
+//         this.age = 2022 - this.birthYear;
+//         console.log(this);
+//         return this.age;
+//     },
 
-    emonDetail: function () {
-        return `${this.lastName} a ${this.calcAge()} year old ${this.job} and he has ${this.drivingLicense ? 'a' : no} driving license`;
-    }
-};
+//     emonDetail: function () {
+//         return `${this.lastName} a ${this.calcAge()} year old ${this.job} and he has ${this.drivingLicense ? 'a' : no} driving license`;
+//     }
+// };
+// // console.log(emon.age);
+
+// console.log(emon.calcAge());
 // console.log(emon.age);
-
-console.log(emon.calcAge());
-console.log(emon.age);
-console.log(emon.emonDetail());
+// console.log(emon.emonDetail());
 
 
