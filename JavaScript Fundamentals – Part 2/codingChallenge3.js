@@ -1,4 +1,4 @@
-const mash = {
+const mark = {
     firstName: 'Mark',
     lastName: 'Miller',
     weight: 78,
@@ -9,4 +9,4 @@ const mash = {
     }
 };
 
-console.log(mash.calcBMI());
+const 
