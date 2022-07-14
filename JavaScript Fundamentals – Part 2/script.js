@@ -147,3 +147,18 @@
 // console.log(emon.emonDetail());
 
 
+const emon = {
+    firstName: 'Md',
+    lastName: 'Emon',
+    age: 22,
+    job: "student",
+    friends: ['Anik', 'Sagor', 'Bappy'],
+    drivingLicense: true,
+};
+
+const type = [];
+for (let i = 0; i < emon.friends.length; i++) {
+    console.log(emon.friends[i], typeof emon.friends[i]);
+    type.push(typeof emon.friends[i]);
+}
+console.log(type);
