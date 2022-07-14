@@ -174,13 +174,13 @@
 // console.log(age);
 
 // continue
-//  
+//
 
 
-for (let ex = 1; ex <= 3; ex++) {
-    console.log(`-----start exercise ${ex}`);
+// for (let ex = 1; ex <= 3; ex++) {
+//     console.log(`-----start exercise ${ex}`);
 
-    for (let rep = 1; rep <= 5; rep++) {
-        console.log(`exercise ${ex} : lifting  weight ${rep}`);
-    }
-}
+//     for (let rep = 1; rep <= 5; rep++) {
+//         console.log(`exercise ${ex} : lifting  weight ${rep}`);
+//     }
+// }
