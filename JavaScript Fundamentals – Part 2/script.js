@@ -185,4 +185,11 @@ const emon = [
 for (let i = 0; i < emon.length; i++) {
     if (typeof emon[i] !== 'string') continue;
     console.log(emon[i]);
-};
+}
+
+console.log('===break===')
+for (let i = 0; i < emon.length; i++) {
+    if (typeof emon[i] === 'number') break;
+    console.log(emon[i]);
+}
+
