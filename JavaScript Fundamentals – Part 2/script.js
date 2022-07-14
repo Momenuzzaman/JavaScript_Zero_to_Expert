@@ -174,22 +174,13 @@
 // console.log(age);
 
 // continue
-const emon = [
-    'Md',
-    'Emon',
-    22,
-    "student",
-    ['Anik', 'Sagor', 'Bappy'],
-    true,
-];
-for (let i = 0; i < emon.length; i++) {
-    if (typeof emon[i] !== 'string') continue;
-    console.log(emon[i]);
-}
+//  
 
-console.log('===break===')
-for (let i = 0; i < emon.length; i++) {
-    if (typeof emon[i] === 'number') break;
-    console.log(emon[i]);
-}
 
+for (let ex = 1; ex <= 3; ex++) {
+    console.log(`-----start exercise ${ex}`);
+
+    for (let rep = 1; rep <= 5; rep++) {
+        console.log(`exercise ${ex} : lifting  weight ${rep}`);
+    }
+}
