@@ -147,18 +147,28 @@
 // console.log(emon.emonDetail());
 
 
-const emon = {
-    firstName: 'Md',
-    lastName: 'Emon',
-    age: 22,
-    job: "student",
-    friends: ['Anik', 'Sagor', 'Bappy'],
-    drivingLicense: true,
-};
+// const emon = {
+//     firstName: 'Md',
+//     lastName: 'Emon',
+//     age: 22,
+//     job: "student",
+//     friends: ['Anik', 'Sagor', 'Bappy'],
+//     drivingLicense: true,
+// };
 
-const type = [];
-for (let i = 0; i < emon.friends.length; i++) {
-    console.log(emon.friends[i], typeof emon.friends[i]);
-    type.push(typeof emon.friends[i]);
+// const type = [];
+// for (let i = 0; i < emon.friends.length; i++) {
+//     console.log(emon.friends[i], typeof emon.friends[i]);
+//     type.push(typeof emon.friends[i]);
+// }
+// console.log(type);
+
+
+const years = [1889, 1986, 1990, 1995, 1998];
+const age = [];
+
+for (let i = 0; i < years.length; i++) {
+    const year = years[i];
+    age.push(2022 - year);
 }
-console.log(type);
+console.log(age);
