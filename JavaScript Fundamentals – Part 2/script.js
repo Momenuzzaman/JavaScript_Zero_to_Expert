@@ -164,11 +164,25 @@
 // console.log(type);
 
 
-const years = [1889, 1986, 1990, 1995, 1998];
-const age = [];
+// const years = [1889, 1986, 1990, 1995, 1998];
+// const age = [];
 
-for (let i = 0; i < years.length; i++) {
-    const year = years[i];
-    age.push(2022 - year);
-}
-console.log(age);
+// for (let i = 0; i < years.length; i++) {
+//     const year = years[i];
+//     age.push(2022 - year);
+// }
+// console.log(age);
+
+// continue
+const emon = [
+    'Md',
+    'Emon',
+    22,
+    "student",
+    ['Anik', 'Sagor', 'Bappy'],
+    true,
+];
+for (let i = 0; i < emon.length; i++) {
+    if (typeof emon[i] !== 'string') continue;
+    console.log(emon[i]);
+};
