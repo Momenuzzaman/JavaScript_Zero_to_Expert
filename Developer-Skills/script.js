@@ -8,6 +8,7 @@ const calcTemp = (temps) => {
     let min = temps[0];
     for (let i = 1; i < temps.length; i++) {
         const temp = temps[i];
+        if (typeof temp !== 'number') continue;
         if (temp > max) {
             max = temps[i];
         }
@@ -16,6 +17,6 @@ const calcTemp = (temps) => {
         }
     }
     console.log(max, min);
+    console.log(max - min);
 };
 calcTemp(temperatures);
-
