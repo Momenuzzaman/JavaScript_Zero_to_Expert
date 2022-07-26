@@ -22,6 +22,8 @@ document.querySelector(".check").addEventListener("click", function () {
     // When player win
     else if (guess === guessNumber) {
         document.querySelector(".message").textContent = "Correct Number";
+
+        document.querySelector("body").style.backgroundColor = "#60b347";
     }
     // When guess Number to High
     else if (guess > guessNumber) {
