@@ -9,7 +9,7 @@
 
 const guessNumber = Math.round(Math.random() * 20);
 console.log(guessNumber);
-document.querySelector(".number").textContent = guessNumber;
+
 const score = document.querySelector(".score");
 let displayScore = 20;
 
@@ -22,6 +22,8 @@ document.querySelector(".check").addEventListener("click", function () {
     // When player win
     else if (guess === guessNumber) {
         document.querySelector(".message").textContent = "Correct Number";
+
+        document.querySelector(".number").textContent = guessNumber;
 
         document.querySelector("body").style.backgroundColor = "#60b347";
     }
