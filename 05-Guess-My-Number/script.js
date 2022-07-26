@@ -33,11 +33,18 @@ document.querySelector(".check").addEventListener("click", function () {
             displayScore--;
             score.textContent = 0;
         }
-
     }
     else if (guess < guessNumber) {
-        document.querySelector(".message").textContent = "Too Low";
-        displayScore--;
-        score.textContent = displayScore;
+        if (displayScore > 1) {
+            document.querySelector(".message").textContent = "Too Low";
+            displayScore--;
+            score.textContent = displayScore;
+        }
+        else {
+            document.querySelector(".message").textContent = "Lose the game";
+            displayScore--;
+            score.textContent = 0;
+        }
     }
+
 });
