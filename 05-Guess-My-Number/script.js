@@ -15,13 +15,15 @@ let displayScore = 20;
 
 document.querySelector(".check").addEventListener("click", function () {
     const guess = Number(document.querySelector(".guess").value);
-
+    //  When there is no number
     if (!guess) {
         document.querySelector(".message").textContent = "Not a number";
     }
+    // When player win
     else if (guess === guessNumber) {
         document.querySelector(".message").textContent = "Correct Number";
     }
+    // When guess Number to High
     else if (guess > guessNumber) {
         if (displayScore > 1) {
             document.querySelector(".message").textContent = "Too High";
@@ -34,6 +36,7 @@ document.querySelector(".check").addEventListener("click", function () {
             score.textContent = 0;
         }
     }
+    // When guess Number to Low
     else if (guess < guessNumber) {
         if (displayScore > 1) {
             document.querySelector(".message").textContent = "Too Low";
