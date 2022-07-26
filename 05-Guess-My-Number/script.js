@@ -7,7 +7,7 @@
 // document.querySelector(".message").textContent = "Correct Number";
 // console.log(document.querySelector(".message").textContent);
 
-const guessNumber = Math.round(Math.random() * 20);
+let guessNumber = Math.round(Math.random() * 20);
 console.log(guessNumber);
 
 const score = document.querySelector(".score");
@@ -53,5 +53,15 @@ document.querySelector(".check").addEventListener("click", function () {
             score.textContent = 0;
         }
     }
+});
 
+document.querySelector(".again").addEventListener("click", function () {
+    guessNumber = Math.round(Math.random() * 20);
+    console.log(guessNumber);
+    document.querySelector(".guess").value = '';
+    document.querySelector(".message").textContent = "Start guessing...";
+    document.querySelector(".number").textContent = "?";
+    let displayScore = 20;
+    score.textContent = displayScore;
+    document.querySelector("body").style.backgroundColor = "#222";
 });
