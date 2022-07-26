@@ -7,10 +7,17 @@
 // document.querySelector(".message").textContent = "Correct Number";
 // console.log(document.querySelector(".message").textContent);
 
+const guessNumber = Math.round(Math.random() * 20);
+console.log(guessNumber);
+document.querySelector(".number").textContent = guessNumber;
+
 document.querySelector(".check").addEventListener("click", function () {
     const guess = Number(document.querySelector(".guess").value);
 
     if (!guess) {
-        document.querySelector(".message").textContent = "Not a valid number";
+        document.querySelector(".message").textContent = "Not a number";
+    }
+    else if (guess === guessNumber) {
+        document.querySelector(".message").textContent = "Correct Number";
     }
 });
