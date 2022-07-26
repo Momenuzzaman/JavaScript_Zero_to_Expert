@@ -24,8 +24,10 @@ document.querySelector(".check").addEventListener("click", function () {
     }
     else if (guess > guessNumber) {
         document.querySelector(".message").textContent = "Too High";
+        displayScore--;
     }
     else if (guess < guessNumber) {
         document.querySelector(".message").textContent = "Too Low";
+        displayScore--;
     }
 });
