@@ -23,11 +23,21 @@ document.querySelector(".check").addEventListener("click", function () {
         document.querySelector(".message").textContent = "Correct Number";
     }
     else if (guess > guessNumber) {
-        document.querySelector(".message").textContent = "Too High";
-        displayScore--;
+        if (displayScore > 1) {
+            document.querySelector(".message").textContent = "Too High";
+            displayScore--;
+            score.textContent = displayScore;
+        }
+        else {
+            document.querySelector(".message").textContent = "Lose the game";
+            displayScore--;
+            score.textContent = 0;
+        }
+
     }
     else if (guess < guessNumber) {
         document.querySelector(".message").textContent = "Too Low";
         displayScore--;
+        score.textContent = displayScore;
     }
 });
