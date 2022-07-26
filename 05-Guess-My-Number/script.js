@@ -10,6 +10,8 @@
 const guessNumber = Math.round(Math.random() * 20);
 console.log(guessNumber);
 document.querySelector(".number").textContent = guessNumber;
+const score = document.querySelector(".score");
+let displayScore = 20;
 
 document.querySelector(".check").addEventListener("click", function () {
     const guess = Number(document.querySelector(".guess").value);
