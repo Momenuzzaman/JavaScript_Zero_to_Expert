@@ -9,11 +9,13 @@ const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 
 // stating condition
+const scores = [0, 0];
 score0.textContent = 0;
 score1.textContent = 0;
 dice.classList.add("hidden");
 
 let currentScore = 0;
+let activePlayer = 0;
 btnRoll.addEventListener("click", function () {
     const number = Math.round(Math.random() * 6 + 1);
     dice.classList.remove("hidden");
@@ -22,5 +24,7 @@ btnRoll.addEventListener("click", function () {
     if (number !== 1) {
         currentScore += number;
         currentScore0.textContent = currentScore;
+    }
+    else {
     }
 });
