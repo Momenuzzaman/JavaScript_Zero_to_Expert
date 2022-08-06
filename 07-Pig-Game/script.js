@@ -12,8 +12,13 @@ score0.textContent = 0;
 score1.textContent = 0;
 dice.classList.add("hidden");
 
+let currentScore = 0;
 btnRoll.addEventListener("click", function () {
     const number = Math.round(Math.random() * 6 + 1);
     dice.classList.remove("hidden");
+    dice.src = `dice-${number}.png`;
 
+    if (dice !== 1) {
+
+    }
 });
