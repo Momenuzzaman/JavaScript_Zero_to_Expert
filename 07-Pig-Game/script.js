@@ -4,6 +4,7 @@ const score0 = document.querySelector("#score--0");
 const score1 = document.querySelector("#score--1");
 const dice = document.querySelector(".dice");
 const btnNew = document.querySelector(".btn--new");
+const btnRoll = document.querySelector(".btn--roll");
 
 // stating condition
 score0.textContent = 0;
