@@ -3,17 +3,19 @@
 const score0 = document.querySelector("#score--0");
 const currentScore0 = document.querySelector("#current--0");
 const score1 = document.querySelector("#score--1");
+const currentScore1 = document.querySelector("#current--1");
 const dice = document.querySelector(".dice");
 const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 
 // stating condition
-const scores = [0, 0];
+
 score0.textContent = 0;
 score1.textContent = 0;
 dice.classList.add("hidden");
 
+const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 btnRoll.addEventListener("click", function () {
@@ -23,7 +25,8 @@ btnRoll.addEventListener("click", function () {
 
     if (number !== 1) {
         currentScore += number;
-        currentScore0.textContent = currentScore;
+        document.querySelector(`#current--${activePlayer}`).textContent = currentScore;
+        // currentScore0.textContent = currentScore;
     }
     else {
     }
