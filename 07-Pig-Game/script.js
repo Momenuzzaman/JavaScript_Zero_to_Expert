@@ -11,7 +11,7 @@ const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 
 // stating condition
-
+const playing = true;
 score0.textContent = 0;
 score1.textContent = 0;
 dice.classList.add("hidden");
