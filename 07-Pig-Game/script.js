@@ -37,3 +37,6 @@ btnRoll.addEventListener("click", function () {
         player1.classList.toggle("player--active");
     }
 });
+btnHold.addEventListener("click", function () {
+    scores[activePlayer] += currentScore;
+});
