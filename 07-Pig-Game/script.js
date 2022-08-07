@@ -11,10 +11,8 @@ const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 
 // stating condition
-let playing = true;
-score0.textContent = 0;
-score1.textContent = 0;
-dice.classList.add("hidden");
+
+
 
 const switchPlayer = () => {
     document.querySelector(`#current--${activePlayer}`).textContent = 0;
@@ -23,13 +21,29 @@ const switchPlayer = () => {
     player0.classList.toggle("player--active");
     player1.classList.toggle("player--active");
 };
+let scores, currentScore, activePlayer, playing;
 
-const scores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
+const init = () => {
+    scores = [0, 0];
+    currentScore = 0;
+    activePlayer = 0;
+    playing = true;
+
+    score0.textContent = 0;
+    score1.textContent = 0;
+    currentScore0.textContent = 0;
+    currentScore1.textContent = 0;
+
+    player0.classList.remove('player--winner');
+    player1.classList.remove('player--winner');
+    player0.classList.add('player--active');
+    player1.classList.remove('player--active');
+    dice.classList.add("hidden");
+};
+init();
 btnRoll.addEventListener("click", function () {
     if (playing) {
-        const number = Math.round(Math.random() * 6 + 1);
+        const number = Math.trunc(Math.random() * 6 + 1);
         dice.classList.remove("hidden");
         dice.src = `dice-${number}.png`;
 
@@ -58,13 +72,4 @@ btnHold.addEventListener("click", function () {
         }
     }
 });
-btnNew.addEventListener('click', function () {
-    score0.textContent = 0;
-    score1.textContent = 0;
-    currentScore0.textContent = 0;
-    currentScore1.textContent = 0;
-    player0.classList.remove('player--winner');
-    player1.classList.remove('player--winner');
-    player0.classList.add('player--active');
-    player1.classList.remove('player--active');
-}); 
+btnNew.addEventListener('click', init); 
