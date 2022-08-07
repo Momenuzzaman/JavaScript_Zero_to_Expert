@@ -61,4 +61,8 @@ btnHold.addEventListener("click", function () {
 btnNew.addEventListener('click', function () {
     score0.textContent = 0;
     score1.textContent = 0;
+    currentScore0.textContent = 0;
+    currentScore1.textContent = 0;
+    player0.classList.remove('player--winner');
+    player1.classList.remove('player--winner');
 }); 
