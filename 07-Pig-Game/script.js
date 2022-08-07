@@ -44,4 +44,5 @@ btnRoll.addEventListener("click", function () {
 btnHold.addEventListener("click", function () {
     scores[activePlayer] += currentScore;
     document.querySelector(`#score--${activePlayer}`).textContent = scores[activePlayer];
+    switchPlayer();
 });
