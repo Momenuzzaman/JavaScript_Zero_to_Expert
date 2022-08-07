@@ -59,7 +59,6 @@ btnHold.addEventListener("click", function () {
     }
 });
 btnNew.addEventListener('click', function () {
-    document.querySelector(`#current--${activePlayer}`).textContent = 0;
-
-    document.querySelector(`#score--${activePlayer}`).textContent = 0;
+    score0.textContent = 0;
+    score1.textContent = 0;
 }); 
