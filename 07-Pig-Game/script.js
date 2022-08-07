@@ -44,15 +44,15 @@ btnRoll.addEventListener("click", function () {
     }
 });
 btnHold.addEventListener("click", function () {
-    scores[activePlayer] += currentScore;
-    document.querySelector(`#score--${activePlayer}`).textContent = scores[activePlayer];
-    if (scores[activePlayer] >= 20) {
-        document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
-        document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
+    if (playing) {
+        scores[activePlayer] += currentScore;
+        document.querySelector(`#score--${activePlayer}`).textContent = scores[activePlayer];
+        if (scores[activePlayer] >= 20) {
+            document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
+            document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
+        }
+        else {
+            switchPlayer();
+        }
     }
-    else {
-        switchPlayer();
-    }
-
-
 });
