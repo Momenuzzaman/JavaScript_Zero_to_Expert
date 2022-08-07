@@ -17,7 +17,11 @@ score1.textContent = 0;
 dice.classList.add("hidden");
 
 const switchPlayer = () => {
-
+    document.querySelector(`#current--${activePlayer}`).textContent = 0;
+    currentScore = 0;
+    activePlayer = activePlayer === 0 ? 1 : 0;
+    player0.classList.toggle("player--active");
+    player1.classList.toggle("player--active");
 };
 
 const scores = [0, 0];
@@ -34,11 +38,7 @@ btnRoll.addEventListener("click", function () {
         // currentScore0.textContent = currentScore;
     }
     else {
-        document.querySelector(`#current--${activePlayer}`).textContent = 0;
-        currentScore = 0;
-        activePlayer = activePlayer === 0 ? 1 : 0;
-        player0.classList.toggle("player--active");
-        player1.classList.toggle("player--active");
+        switchPlayer();
     }
 });
 btnHold.addEventListener("click", function () {
