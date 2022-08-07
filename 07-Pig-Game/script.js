@@ -16,6 +16,10 @@ score0.textContent = 0;
 score1.textContent = 0;
 dice.classList.add("hidden");
 
+const switchPlayer = () => {
+
+};
+
 const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
