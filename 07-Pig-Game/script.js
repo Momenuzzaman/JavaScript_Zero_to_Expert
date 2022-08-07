@@ -28,17 +28,19 @@ const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 btnRoll.addEventListener("click", function () {
-    const number = Math.round(Math.random() * 6 + 1);
-    dice.classList.remove("hidden");
-    dice.src = `dice-${number}.png`;
+    if (playing) {
+        const number = Math.round(Math.random() * 6 + 1);
+        dice.classList.remove("hidden");
+        dice.src = `dice-${number}.png`;
 
-    if (number !== 1) {
-        currentScore += number;
-        document.querySelector(`#current--${activePlayer}`).textContent = currentScore;
-        // currentScore0.textContent = currentScore;
-    }
-    else {
-        switchPlayer();
+        if (number !== 1) {
+            currentScore += number;
+            document.querySelector(`#current--${activePlayer}`).textContent = currentScore;
+            // currentScore0.textContent = currentScore;
+        }
+        else {
+            switchPlayer();
+        }
     }
 });
 btnHold.addEventListener("click", function () {
