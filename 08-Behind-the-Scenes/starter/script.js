@@ -23,7 +23,7 @@
 //     deleteProduct();
 // }
 
-const calcAge = birthYear => {
-    console.log(2022 - birthYear);
-};
-calcAge(1998);
+// const calcAge = birthYear => {
+//     console.log(2022 - birthYear);
+// };
+// calcAge(1998);
