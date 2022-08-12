@@ -27,3 +27,11 @@
 //     console.log(2022 - birthYear);
 // };
 // calcAge(1998);
+
+const jonas = {
+    currentYEar: 2022,
+    calcAge: function (birthYear) {
+        console.log(this.currentYEar - birthYear);
+    }
+};
+jonas.calcAge(1999);
