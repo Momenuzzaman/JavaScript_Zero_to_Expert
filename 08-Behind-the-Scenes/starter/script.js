@@ -14,11 +14,13 @@
 // const result = calcAge(1998);
 // console.log(result);
 
-const product = 10;
+// const product = 10;
 
-const deleteProduct = () => {
-    console.log("All products deleted");
-}
-if (product < 15) {
-    deleteProduct();
-}
+// const deleteProduct = () => {
+//     console.log("All products deleted");
+// }
+// if (product < 15) {
+//     deleteProduct();
+// }
+
+const calcAge = birthYear => { };
