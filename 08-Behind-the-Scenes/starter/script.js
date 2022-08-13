@@ -48,7 +48,9 @@ const jonas = {
         console.log(2022 - this.year);
     },
     name: function () {
+        console.log(`hey ${this.firstName}`);
     }
 };
 
 // jonas.calcAge();
+jonas.name();
