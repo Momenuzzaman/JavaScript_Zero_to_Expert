@@ -67,7 +67,16 @@
 // const friend = me;
 // friend.age = 20;
 
-let name = 'Emon';
-const oldName = name;
-name = 'Momenuzzaman';
+// let name = 'Emon';
+// const oldName = name;
+// name = 'Momenuzzaman';
 
+const emon = {
+    name: 'Momenuzzaman',
+    age: 22
+};
+
+const liton = emon;
+liton.age = 38;
+
+console.log('emon', emon, 'liton', liton); 
