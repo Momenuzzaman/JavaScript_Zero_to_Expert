@@ -54,12 +54,20 @@
 
 // // jonas.calcAge();
 // jonas.name();
-let age = 20;
-let oldAge = age;
-age = 21;
-console.log(oldAge, age);
+// let age = 20;
+// let oldAge = age;
+// age = 21;
+// console.log(oldAge, age);
 
-const me = {
-    name: 'Emon',
-    age: 22
-};
+// const me = {
+//     name: 'Emon',
+//     age: 22
+// };
+
+// const friend = me;
+// friend.age = 20;
+
+let name = 'Emon';
+const oldName = name;
+name = 'Momenuzzaman';
+
