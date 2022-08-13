@@ -28,15 +28,27 @@
 // };
 // calcAge(1998);
 
+// const jonas = {
+//     year: 1998,
+//     calcAge: function (birthYear) {
+//         console.log(2022 - this.year);
+//     }
+// };
+// // jonas.calcAge(1999);
+// const emon = {
+//     year: 2000
+// };
+// emon.calcAge = jonas.calcAge;
+// emon.calcAge();
+
 const jonas = {
+    firstName: 'Jonas',
     year: 1998,
-    calcAge: function (birthYear) {
+    calcAge: function () {
         console.log(2022 - this.year);
+    },
+    name: function () {
     }
 };
-// jonas.calcAge(1999);
-const emon = {
-    year: 2000
-};
-emon.calcAge = jonas.calcAge;
-emon.calcAge();
+
+// jonas.calcAge();
