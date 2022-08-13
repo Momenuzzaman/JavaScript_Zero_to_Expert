@@ -41,16 +41,20 @@
 // emon.calcAge = jonas.calcAge;
 // emon.calcAge();
 
-const jonas = {
-    firstName: 'Jonas',
-    year: 1998,
-    calcAge: function () {
-        console.log(2022 - this.year);
-    },
-    name: function () {
-        console.log(`hey ${this.firstName}`);
-    }
-};
+// const jonas = {
+//     firstName: 'Jonas',
+//     year: 1998,
+//     calcAge: function () {
+//         console.log(2022 - this.year);
+//     },
+//     name: function () {
+//         console.log(`hey ${this.firstName}`);
+//     }
+// };
 
-// jonas.calcAge();
-jonas.name();
+// // jonas.calcAge();
+// jonas.name();
+let age = 20;
+let oldAge = age;
+age = 21;
+console.log(oldAge, age);
