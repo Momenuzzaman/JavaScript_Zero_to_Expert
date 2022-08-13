@@ -58,3 +58,8 @@ let age = 20;
 let oldAge = age;
 age = 21;
 console.log(oldAge, age);
+
+const me = {
+    name: 'Emon',
+    age: 22
+};
