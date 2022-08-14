@@ -19,3 +19,6 @@ console.log(main, secondary);
 [main, secondary] = [secondary, main];
 console.log(main, secondary);
 
+const [starter, mainMenu] = restaurant.order(2, 0);
+console.log(starter, mainMenu);
+
