@@ -4,6 +4,9 @@ const restaurant = {
     categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
     starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
     mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+    order: function (starterIndex, mainMenuIndex) {
+        return [this.starterMenu[starterIndex], this.mainMenu[mainMenuIndex]];
+    },
 };
 
 const arr = [1, 2, 3];
@@ -15,3 +18,4 @@ console.log(main, secondary);
 
 [main, secondary] = [secondary, main];
 console.log(main, secondary);
+
