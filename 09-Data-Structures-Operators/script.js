@@ -23,16 +23,21 @@ const restaurant = {
     },
 };
 
-const arr = [1, 2, 3];
-const [a, b, c] = arr;
-console.log(a, b, c);
+// const arr = [1, 2, 3];
+// const [a, b, c] = arr;
+// console.log(a, b, c);
 
-let [main, secondary] = restaurant.categories;
-console.log(main, secondary);
+// let [main, secondary] = restaurant.categories;
+// console.log(main, secondary);
 
-[main, secondary] = [secondary, main];
-console.log(main, secondary);
+// [main, secondary] = [secondary, main];
+// console.log(main, secondary);
 
-const [starter, mainMenu] = restaurant.order(2, 0);
-console.log(starter, mainMenu);
+// const [starter, mainMenu] = restaurant.order(2, 0);
+// console.log(starter, mainMenu);
 
+const { name, categories, openingHours } = restaurant;
+console.log(name, categories, openingHours);
+
+const { menu = [], starterMenu: starter = [] } = restaurant;
+console.log(menu, starter);
