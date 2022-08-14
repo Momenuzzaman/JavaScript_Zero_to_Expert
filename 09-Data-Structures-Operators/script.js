@@ -7,6 +7,20 @@ const restaurant = {
     order: function (starterIndex, mainMenuIndex) {
         return [this.starterMenu[starterIndex], this.mainMenu[mainMenuIndex]];
     },
+    openingHours: {
+        thu: {
+            open: 12,
+            close: 22,
+        },
+        fri: {
+            open: 11,
+            close: 23,
+        },
+        sat: {
+            open: 0, // Open 24 hours
+            close: 24,
+        },
+    },
 };
 
 const arr = [1, 2, 3];
