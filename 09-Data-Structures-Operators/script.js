@@ -4,9 +4,6 @@ const restaurant = {
     categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
     starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
     mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-    order: function (starterIndex, mainMenuIndex) {
-        return [this.starterMenu[starterIndex], this.mainMenu[mainMenuIndex]];
-    },
     openingHours: {
         thu: {
             open: 12,
@@ -21,6 +18,15 @@ const restaurant = {
             close: 24,
         },
     },
+    order: function (starterIndex, mainMenuIndex) {
+        return [this.starterMenu[starterIndex], this.mainMenu[mainMenuIndex]];
+    },
+    orderDelivery: function (starterIndex, mainMenuIndex, time, location) {
+        console.log(`Order received ${this.starterMenu[starterIndex]} 
+        and ${this.mainMenu[mainMenuIndex]}
+        will  be delivered to ${location} 
+        at ${time}`);
+    }
 };
 
 // const arr = [1, 2, 3];
