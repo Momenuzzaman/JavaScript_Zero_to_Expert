@@ -21,11 +21,8 @@ const restaurant = {
     order: function (starterIndex, mainMenuIndex) {
         return [this.starterMenu[starterIndex], this.mainMenu[mainMenuIndex]];
     },
-    orderDelivery: function (starterIndex, mainMenuIndex, time, location) {
-        console.log(`Order received ${this.starterMenu[starterIndex]} 
-        and ${this.mainMenu[mainMenuIndex]}
-        will  be delivered to ${location} 
-        at ${time}`);
+    orderDelivery: function ({ starterIndex, mainMenuIndex, time, address }) {
+        console.log(`Order received ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainMenuIndex]}will  be delivered to ${address}  at ${time}`);
     }
 };
 
@@ -47,3 +44,12 @@ console.log(name, categories, openingHours);
 
 const { menu = [], starterMenu: starter = [] } = restaurant;
 console.log(menu, starter);
+
+restaurant.orderDelivery(
+    {
+        time: 1.25,
+        address: 'Dhaka, bangladesh',
+        starterIndex: 3,
+        mainMenuIndex: 1
+    }
+);
