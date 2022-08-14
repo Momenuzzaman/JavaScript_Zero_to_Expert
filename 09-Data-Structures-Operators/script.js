@@ -10,5 +10,8 @@ const arr = [1, 2, 3];
 const [a, b, c] = arr;
 console.log(a, b, c);
 
-const [main, secondary] = restaurant.categories;
+let [main, secondary] = restaurant.categories;
+console.log(main, secondary);
+
+[main, secondary] = [secondary, main];
 console.log(main, secondary);
