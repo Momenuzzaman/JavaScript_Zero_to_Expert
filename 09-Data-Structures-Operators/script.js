@@ -67,3 +67,7 @@ console.log(mainMenuCopy);
 const allMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 console.log(allMenu);
 
+const str = 'Emon';
+const newStr = [...str, 'e'];
+console.log(newStr);
+
