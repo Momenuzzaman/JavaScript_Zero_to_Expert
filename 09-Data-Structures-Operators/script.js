@@ -59,3 +59,8 @@ console.log(newArr);
 
 const newMenu = [...restaurant.mainMenu, 'Vat'];
 console.log(newMenu);
+
+
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
+
