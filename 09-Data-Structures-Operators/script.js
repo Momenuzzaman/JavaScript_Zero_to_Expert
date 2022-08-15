@@ -53,21 +53,26 @@ const restaurant = {
 //         mainMenuIndex: 1
 //     }
 // );
-const arr = [4, 5, 6];
-const newArr = [1, 2, 3, ...arr];
-console.log(newArr);
+// const arr = [4, 5, 6];
+// const newArr = [1, 2, 3, ...arr];
+// console.log(newArr);
 
-const newMenu = [...restaurant.mainMenu, 'Vat'];
-console.log(newMenu);
+// const newMenu = [...restaurant.mainMenu, 'Vat'];
+// console.log(newMenu);
 
 
-const mainMenuCopy = [...restaurant.mainMenu];
-console.log(mainMenuCopy);
+// const mainMenuCopy = [...restaurant.mainMenu];
+// console.log(mainMenuCopy);
 
-const allMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(allMenu);
+// const allMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(allMenu);
 
-const str = 'Emon';
-const newStr = [...str, 'e'];
-console.log(newStr);
+// const str = 'Emon';
+// const newStr = [...str, 'e'];
+// console.log(newStr);
 
+const arr = [1, 2, 3, ...[4, 5, 6]];
+console.log(arr);
+
+const [a, b, ...other] = [1, 2, 3, 4, 5, 6, 7];
+console.log(a, b, other);
