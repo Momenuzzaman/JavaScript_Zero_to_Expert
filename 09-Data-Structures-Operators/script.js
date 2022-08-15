@@ -23,8 +23,14 @@ const restaurant = {
     },
     orderDelivery: function ({ starterIndex, mainMenuIndex, time, address }) {
         console.log(`Order received ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainMenuIndex]}will  be delivered to ${address}  at ${time}`);
+    },
+    orderPizza: function (mainIngredient, ...otherIngredient) {
+        console.log(mainIngredient);
+        console.log(otherIngredient);
     }
 };
+
+restaurant.orderPizza('mushrooms', 'onion', 'olive', 'spinach');
 
 // const arr = [1, 2, 3];
 // const [a, b, c] = arr;
@@ -77,14 +83,22 @@ const restaurant = {
 // const [a, b, ...other] = [1, 2, 3, 4, 5, 6, 7];
 // console.log(a, b, other);
 
-const [pasta, soup, ...other] = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(pasta, soup, other);
+// const [pasta, soup, ...other] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(pasta, soup, other);
 
-const { sat, ...weekends } = restaurant.openingHours;
-console.log(weekends)
+// const { sat, ...weekends } = restaurant.openingHours;
+// console.log(weekends)
 
-const add = (...numbers) => {
-    console.log(numbers)
-}
-add(1, 2, 3, 4);
-add(1, 2, 3, 4, 5, 6, 7, 8, 9);
+// // const add = (...numbers) => {
+// //     console.log(numbers)
+// // }
+// const add = (...numbers) => {
+//     let sum = 0;
+//     for (let i = 0; i < numbers.length; i++) {
+//         sum = sum + numbers[i];
+//         console.log(sum);
+//     }
+// };
+
+// add(1, 2, 3, 4);
+// add(1, 2, 3, 4, 5, 6, 7, 8, 9);
