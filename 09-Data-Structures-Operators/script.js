@@ -64,3 +64,6 @@ console.log(newMenu);
 const mainMenuCopy = [...restaurant.mainMenu];
 console.log(mainMenuCopy);
 
+const allMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(allMenu);
+
