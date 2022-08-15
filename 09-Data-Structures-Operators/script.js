@@ -39,17 +39,20 @@ const restaurant = {
 // const [starter, mainMenu] = restaurant.order(2, 0);
 // console.log(starter, mainMenu);
 
-const { name, categories, openingHours } = restaurant;
-console.log(name, categories, openingHours);
+// const { name, categories, openingHours } = restaurant;
+// console.log(name, categories, openingHours);
 
-const { menu = [], starterMenu: starter = [] } = restaurant;
-console.log(menu, starter);
+// const { menu = [], starterMenu: starter = [] } = restaurant;
+// console.log(menu, starter);
 
-restaurant.orderDelivery(
-    {
-        time: 1.25,
-        address: 'Dhaka, bangladesh',
-        starterIndex: 3,
-        mainMenuIndex: 1
-    }
-);
+// restaurant.orderDelivery(
+//     {
+//         time: 1.25,
+//         address: 'Dhaka, bangladesh',
+//         starterIndex: 3,
+//         mainMenuIndex: 1
+//     }
+// );
+const arr = [4, 5, 6];
+const newArr = [1, 2, 3, ...arr];
+console.log(newArr);
