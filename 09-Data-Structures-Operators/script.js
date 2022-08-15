@@ -71,8 +71,11 @@ const restaurant = {
 // const newStr = [...str, 'e'];
 // console.log(newStr);
 
-const arr = [1, 2, 3, ...[4, 5, 6]];
-console.log(arr);
+// const arr = [1, 2, 3, ...[4, 5, 6]];
+// console.log(arr);
 
-const [a, b, ...other] = [1, 2, 3, 4, 5, 6, 7];
-console.log(a, b, other);
+// const [a, b, ...other] = [1, 2, 3, 4, 5, 6, 7];
+// console.log(a, b, other);
+
+const [pasta, soup, ...other] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(pasta, soup, other);
