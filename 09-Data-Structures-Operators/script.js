@@ -79,3 +79,12 @@ const restaurant = {
 
 const [pasta, soup, ...other] = [...restaurant.mainMenu, ...restaurant.starterMenu];
 console.log(pasta, soup, other);
+
+const { sat, ...weekends } = restaurant.openingHours;
+console.log(weekends)
+
+const add = (...numbers) => {
+    console.log(numbers)
+}
+add(1, 2, 3, 4);
+add(1, 2, 3, 4, 5, 6, 7, 8, 9);
