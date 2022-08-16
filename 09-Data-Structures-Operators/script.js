@@ -103,9 +103,14 @@ const restaurant = {
 // add(1, 2, 3, 4);
 // add(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
-console.log(3 || 'Emon');
-console.log('Liton' || 2);
-console.log(undefined || null);
-console.log(true || 0);
+// console.log(3 || 'Emon');
+// console.log('Liton' || 2);
+// console.log(undefined || null);
+// console.log(true || 0);
+// console.log(undefined || 0 || null || 'Emon' || true);
 
-console.log(undefined || 0 || null || 'Emon' || true);
+const guest = restaurant.numberGuest ? restaurant.numberGuest : 10;
+console.log(guest);
+
+const guest1 = restaurant.numberGuest || 2;
+console.log(guest1);
