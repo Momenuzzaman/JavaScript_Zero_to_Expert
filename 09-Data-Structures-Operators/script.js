@@ -30,7 +30,7 @@ const restaurant = {
     }
 };
 
-restaurant.orderPizza('mushrooms', 'onion', 'olive', 'spinach');
+// restaurant.orderPizza('mushrooms', 'onion', 'olive', 'spinach');
 
 // const arr = [1, 2, 3];
 // const [a, b, c] = arr;
@@ -102,3 +102,10 @@ restaurant.orderPizza('mushrooms', 'onion', 'olive', 'spinach');
 
 // add(1, 2, 3, 4);
 // add(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+console.log(3 || 'Emon');
+console.log('Liton' || 2);
+console.log(undefined || null);
+console.log(true || 0);
+
+console.log(undefined || 0 || null || 'Emon' || true);
