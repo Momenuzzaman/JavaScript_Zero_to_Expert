@@ -123,3 +123,4 @@ console.log(10 && 'Liton');
 if (restaurant.orderPizza) {
     restaurant.orderPizza('Olives', 'mushrooms');
 }
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'Olives');
