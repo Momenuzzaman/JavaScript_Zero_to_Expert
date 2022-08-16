@@ -109,8 +109,17 @@ const restaurant = {
 // console.log(true || 0);
 // console.log(undefined || 0 || null || 'Emon' || true);
 
-const guest = restaurant.numberGuest ? restaurant.numberGuest : 10;
-console.log(guest);
+// const guest = restaurant.numberGuest ? restaurant.numberGuest : 10;
+// console.log(guest);
 
-const guest1 = restaurant.numberGuest || 2;
-console.log(guest1);
+// const guest1 = restaurant.numberGuest || 2;
+// console.log(guest1);
+
+console.log('---And---');
+
+console.log(0 && 'Emon');
+console.log(10 && 'Liton');
+
+if (restaurant.orderPizza) {
+    restaurant.orderPizza('Olives', 'mushrooms');
+}
