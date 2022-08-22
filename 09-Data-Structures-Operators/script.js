@@ -1,4 +1,4 @@
-const openingHours = {
+const hours = {
     thu: {
         open: 12,
         close: 22,
@@ -18,7 +18,8 @@ const restaurant = {
     categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
     starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
     mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-
+    // ES6 Enhanced Object Literals
+    hours,
     order: function (starterIndex, mainMenuIndex) {
         return [this.starterMenu[starterIndex], this.mainMenu[mainMenuIndex]];
     },
@@ -36,7 +37,7 @@ for (const item of allMenu) console.log(item);
 for (const [it, element] of allMenu.entries()) {
     console.log(`${it + 1} : ${element}`);
 }
-
+console.log(restaurant.hours);
 // restaurant.orderPizza('mushrooms', 'onion', 'olive', 'spinach');
 
 // const arr = [1, 2, 3];
