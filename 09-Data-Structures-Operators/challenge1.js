@@ -48,3 +48,6 @@ console.log(gk, otherPlayer);
 
 const allPlayers = [...player1, ...player2];
 console.log(allPlayers);
+
+const finalPlayers = [...player1, 'Thiago', 'Coutinho', 'Perisic'];
+console.log(finalPlayers);
