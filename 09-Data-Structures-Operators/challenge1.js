@@ -40,17 +40,23 @@ const game = {
     },
 };
 
-const [player1, player2] = game.players;
-console.log(player1, player2);
+// const [player1, player2] = game.players;
+// console.log(player1, player2);
 
-const [gk, ...otherPlayer] = player1;
-console.log(gk, otherPlayer);
+// const [gk, ...otherPlayer] = player1;
+// console.log(gk, otherPlayer);
 
-const allPlayers = [...player1, ...player2];
-console.log(allPlayers);
+// const allPlayers = [...player1, ...player2];
+// console.log(allPlayers);
 
-const finalPlayers = [...player1, 'Thiago', 'Coutinho', 'Perisic'];
-console.log(finalPlayers);
+// const finalPlayers = [...player1, 'Thiago', 'Coutinho', 'Perisic'];
+// console.log(finalPlayers);
 
-const { team1, x, team2 } = game.odds;
-console.log(team1, x, team2);
+// const { team1, x, team2 } = game.odds;
+// console.log(team1, x, team2);
+
+const printGoals = (...players) => {
+    console.log(players);
+    console.log(`${players.length} goal were scored`);
+};
+printGoals(...game.scored);
