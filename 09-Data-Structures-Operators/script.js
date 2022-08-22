@@ -29,6 +29,8 @@ const restaurant = {
         console.log(otherIngredient);
     }
 };
+const allMenu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+for (const item of allMenu) console.log(item);
 
 // restaurant.orderPizza('mushrooms', 'onion', 'olive', 'spinach');
 
