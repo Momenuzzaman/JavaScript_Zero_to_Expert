@@ -32,6 +32,10 @@ const restaurant = {
 const allMenu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 for (const item of allMenu) console.log(item);
 
+for (const [it, element] of allMenu.entries()) {
+    console.log(`${it + 1} : ${element}`);
+}
+
 // restaurant.orderPizza('mushrooms', 'onion', 'olive', 'spinach');
 
 // const arr = [1, 2, 3];
