@@ -115,12 +115,15 @@ const restaurant = {
 // const guest1 = restaurant.numberGuest || 2;
 // console.log(guest1);
 
-console.log('---And---');
+// console.log('---And---');
 
-console.log(0 && 'Emon');
-console.log(10 && 'Liton');
+// console.log(0 && 'Emon');
+// console.log(10 && 'Liton');
 
-if (restaurant.orderPizza) {
-    restaurant.orderPizza('Olives', 'mushrooms');
-}
-restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'Olives');
+// if (restaurant.orderPizza) {
+//     restaurant.orderPizza('Olives', 'mushrooms');
+// }
+// restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'Olives');
+restaurant.guestNumber = 0;
+const guestNumber = restaurant.guestNumber ?? 10;
+console.log(guestNumber);
