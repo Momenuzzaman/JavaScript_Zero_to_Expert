@@ -43,3 +43,5 @@ const game = {
 const [player1, player2] = game.players;
 console.log(player1, player2);
 
+const [gk, ...otherPlayer] = player1;
+console.log(gk, otherPlayer);
