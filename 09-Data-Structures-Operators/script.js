@@ -124,6 +124,8 @@ const restaurant = {
 //     restaurant.orderPizza('Olives', 'mushrooms');
 // }
 // restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'Olives');
-restaurant.guestNumber = 0;
-const guestNumber = restaurant.guestNumber ?? 10;
-console.log(guestNumber);
+
+
+// restaurant.guestNumber = 0;
+// const guestNumber = restaurant.guestNumber ?? 10;
+// console.log(guestNumber);
