@@ -45,3 +45,6 @@ console.log(player1, player2);
 
 const [gk, ...otherPlayer] = player1;
 console.log(gk, otherPlayer);
+
+const allPlayers = [...player1, ...player2];
+console.log(allPlayers);
