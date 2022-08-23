@@ -41,12 +41,21 @@ const game = {
 };
 // challenge 2================================================
 
-// const goals = Object.values(game.scored);
-// console.log(goals);
+// for (const [i, goal] of game.scored.entries()) {
+//     console.log(`Goal ${i + 1}: ${goal}`);
+// }
+// const odds = Object.values(game.odds);
+// let average = 0;
+// for (const odd of odds) {
+//     average += odd;
+//     console.log(average);
+// }
+// average /= odds.length;
+// console.log(average);
 
-for (const [i, goal] of game.scored.entries()) {
-    console.log(`Goal ${i + 1}: ${goal}`);
-}
+// for (const [team, odd] of Object.entries(game.odds)) {
+//     console.log(team, odd);
+// }
 
 // const [player1, player2] = game.players;
 // console.log(player1, player2);

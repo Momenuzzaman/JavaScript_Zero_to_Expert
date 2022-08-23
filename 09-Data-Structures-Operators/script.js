@@ -36,20 +36,20 @@ const restaurant = {
 // Optional Chaining
 // console.log(restaurant.hours.mon?.open);
 
-const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
-// for (const day of days) {
-//     const open = restaurant.hours[day]?.open ?? 'close';
-//     console.log(`On ${day}, we open it ${open}`);
+// const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// // for (const day of days) {
+// //     const open = restaurant.hours[day]?.open ?? 'close';
+// //     console.log(`On ${day}, we open it ${open}`);
+// // }
+
+// const properties = Object.keys(hours);
+// console.log(properties);
+
+// let openingStr = `we are open on ${properties.length} day`;
+// for (const day of properties) {
+//     openingStr += `${day},`;
 // }
-
-const properties = Object.keys(hours);
-console.log(properties);
-
-let openingStr = `we are open on ${properties.length} day`;
-for (const day of properties) {
-    openingStr += `${day},`;
-}
-console.log(openingStr);
+// console.log(openingStr);
 
 
 
@@ -159,3 +159,14 @@ console.log(openingStr);
 // restaurant.guestNumber = 0;
 // const guestNumber = restaurant.guestNumber ?? 10;
 // console.log(guestNumber);
+
+// set ================================================================
+
+const orderSet = new Set(['Emon', 'Liton', 'Emon', 'Liton', 'Ruhi', 'Emon', 'Liton', 'Ruhi', 'Ayyan']);
+console.log(orderSet);
+console.log(orderSet.size);
+console.log(orderSet.has('Emon'));
+orderSet.add('Rabaya');
+console.log(orderSet);
+orderSet.delete('Emon');
+console.log(orderSet);
