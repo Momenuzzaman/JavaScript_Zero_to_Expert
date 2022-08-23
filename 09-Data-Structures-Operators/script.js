@@ -32,8 +32,12 @@ const restaurant = {
         console.log(otherIngredient);
     }
 };
+// console.log(restaurant.hours.mon.open);
 // Optional Chaining 
-console.log(restaurant.hours.mon.open);
+// console.log(restaurant.hours.mon?.open);
+
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
 
 // const allMenu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 // for (const item of allMenu) console.log(item);
