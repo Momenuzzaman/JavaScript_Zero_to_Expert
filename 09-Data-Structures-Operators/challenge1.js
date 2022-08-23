@@ -39,6 +39,14 @@ const game = {
         team2: 6.5,
     },
 };
+// challenge 2================================================
+
+// const goals = Object.values(game.scored);
+// console.log(goals);
+
+for (const [i, goal] of game.scored.entries()) {
+    console.log(`Goal ${i + 1}: ${goal}`);
+}
 
 // const [player1, player2] = game.players;
 // console.log(player1, player2);
@@ -55,8 +63,8 @@ const game = {
 // const { team1, x, team2 } = game.odds;
 // console.log(team1, x, team2);
 
-const printGoals = (...players) => {
-    console.log(players);
-    console.log(`${players.length} goal were scored`);
-};
-printGoals(...game.scored);
+// const printGoals = (...players) => {
+//     console.log(players);
+//     console.log(`${players.length} goal were scored`);
+// };
+// printGoals(...game.scored);
