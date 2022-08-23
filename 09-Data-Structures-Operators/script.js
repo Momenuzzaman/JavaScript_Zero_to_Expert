@@ -33,15 +33,20 @@ const restaurant = {
     }
 };
 // console.log(restaurant.hours.mon.open);
-// Optional Chaining 
+// Optional Chaining
 // console.log(restaurant.hours.mon?.open);
 
-const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
-for (const day of days) {
-    const open = restaurant.hours[day]?.open || 'close';
-    console.log(`On ${day}, we open it ${open}`);
-}
+// const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// for (const day of days) {
+//     const open = restaurant.hours[day]?.open ?? 'close';
+//     console.log(`On ${day}, we open it ${open}`);
+// }
 
+const properties = Object.keys(hours);
+console.log(properties);
+
+const openingStr = `we are open on ${properties.length} day`;
+console.log(openingStr);
 
 // const allMenu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 // for (const item of allMenu) console.log(item);
