@@ -170,3 +170,9 @@ orderSet.add('Rabaya');
 console.log(orderSet);
 orderSet.delete('Emon');
 console.log(orderSet);
+
+console.log(new Set('Emon'));
+
+const staff = ['waiter', 'Manager', 'waiter', 'Chef', 'Chef'];
+const uniqueStaff = new Set(staff);
+console.log(uniqueStaff);
