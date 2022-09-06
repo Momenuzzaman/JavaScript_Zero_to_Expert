@@ -162,18 +162,83 @@ const restaurant = {
 
 // set ================================================================
 
-const orderSet = new Set(['Emon', 'Liton', 'Emon', 'Liton', 'Ruhi', 'Emon', 'Liton', 'Ruhi', 'Ayyan']);
-console.log(orderSet);
-console.log(orderSet.size);
-console.log(orderSet.has('Emon'));
-orderSet.add('Rabaya');
-console.log(orderSet);
-orderSet.delete('Emon');
-console.log(orderSet);
+// const orderSet = new Set(['Emon', 'Liton', 'Emon', 'Liton', 'Ruhi', 'Emon', 'Liton', 'Ruhi', 'Ayyan']);
+// console.log(orderSet);
+// console.log(orderSet.size);
+// console.log(orderSet.has('Emon'));
+// orderSet.add('Rabaya');
+// console.log(orderSet);
+// orderSet.delete('Emon');
+// console.log(orderSet);
 
-console.log(new Set('Emon'));
+// console.log(new Set('Emon'));
 
-const staff = ['waiter', 'Manager', 'waiter', 'Chef', 'Chef'];
-const uniqueStaff = [...new Set(staff)];
-console.log(uniqueStaff);
-console.log(new Set(staff).size);
+// const staff = ['waiter', 'Manager', 'waiter', 'Chef', 'Chef'];
+// const uniqueStaff = [...new Set(staff)];
+// console.log(uniqueStaff);
+// console.log(new Set(staff).size);
+
+// const ariLine = 'Tap Air Portugal';
+// const plan = 'A20';
+
+// console.log(plan[1]);
+// console.log(ariLine[4]);
+
+// console.log(ariLine.length);
+// console.log(ariLine.indexOf('P'));
+
+// console.log(ariLine.slice('4'));
+// console.log(ariLine.slice(4, 7));
+
+
+// const passenger = 'EmOn';
+// const passengerLower = passenger.toLowerCase();
+// console.log(passengerLower);
+// const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
+
+// const email = 'md@gmail.com';
+// const loginEmail = '   Md@gmail.com  ';
+
+// const correctEmail = loginEmail.toLowerCase().trim();
+// console.log(correctEmail);
+
+// console.log(email === correctEmail);
+
+// const announcement = 'All passenger come to boarding door 23. boarding door 23';
+// console.log(announcement.replace('door', 'gate'));
+
+// console.log(announcement.replaceAll('door', 'gate'));
+
+// const checkBaggage = (item) => {
+//     const baggage = item.toLowerCase();
+//     if (baggage.includes('knife') || baggage.includes('gun')) {
+//         console.log('You are not  allowed on boards.');
+//     }
+//     else {
+//         console.log('You are allowed on boards.');
+//     }
+// };
+// checkBaggage('I have laptop and pocket Knife');
+// checkBaggage('Some Food and camera');
+
+// const name = 'Md Momenuzzaman';
+// console.log(name.split(' '));
+
+// const capitalizedName = (name) => {
+//     const names = name.split(' ');
+//     const nameUpper = [];
+//     for (const n of names) {
+//         // nameUpper.push(n[0].toUpperCase() + n.slice(1));
+//         nameUpper.push(n.replace(n[0], n[0].toUpperCase()));
+//     }
+//     console.log(nameUpper.join(' '));
+// };
+// capitalizedName('md emon');
+
+const maskCard = (number) => {
+    const str = number + '';
+    const last = str.slice(-4);
+    return last.padStart(str.length, '*');
+};
+console.log(maskCard(12342455435));
