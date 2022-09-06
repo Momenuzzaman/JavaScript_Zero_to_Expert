@@ -14,13 +14,21 @@ const poll = {
         ('Write option number')
         `)
         );
-        console.log(answer);
+        this.displayResult();
+        this.displayResult('string');
 
         // register
         typeof answer === 'number' && answer < this.answers.length && this.answers[answer]++;
         console.log(this.answers);
+    },
+    displayResult(type = 'array') {
+        if (type === 'array') {
+            console.log(this.answers);
+        }
+        else if (type === 'string') {
+            console.log(`Poll result are ${this.answers}.join(', ')}`);
+        }
     }
-
 };
 // poll.registerNewAnswer();
 
