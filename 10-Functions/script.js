@@ -83,14 +83,25 @@
 
 
 // closures************
-const booking = () => {
-    let passenger = 0;
-    return function () {
-        passenger++;
-        console.log(`${passenger} passenger`);
+// const booking = () => {
+//     let passenger = 0;
+//     return function () {
+//         passenger++;
+//         console.log(`${passenger} passenger`);
+//     };
+// };
+
+// const book = booking();
+// book();
+// book();
+
+let f;
+const g = () => {
+    const a = 20;
+    f = function () {
+        console.log(a * 2);
     };
 };
 
-const book = booking();
-book();
-book();
+g();
+f();
