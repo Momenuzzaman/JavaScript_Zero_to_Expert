@@ -88,9 +88,16 @@ const arr = ['a', 'b', 'c', 'd', 'e', 'f'];
 // console.log(arr);
 
 // concat
+
 // const arr2 = ['g', 'h', 'i', 'j'];
+// const letter = arr.concat(arr2);
+// console.log(letter);
 // console.log([...arr, ...arr2]);
 
 // Reverse
 
 // console.log(arr.reverse());
+
+// join ************************************************
+
+// console.log(letter.join(','));
