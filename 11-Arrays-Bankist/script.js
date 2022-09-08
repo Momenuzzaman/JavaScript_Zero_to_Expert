@@ -70,11 +70,11 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
-const arr = ['a', 'b', 'c', 'd', 'e', 'f'];
+// const arr = ['a', 'b', 'c', 'd', 'e', 'f'];
 
 // Slice**********
 // console.log(arr.slice(2));
@@ -101,3 +101,11 @@ const arr = ['a', 'b', 'c', 'd', 'e', 'f'];
 // join ************************************************
 
 // console.log(letter.join(','));
+
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+for (const movement of movements) {
+  movement > 0 ? console.log(`You deposit ${movement}`)
+    : console.log(`You Withdrew ${Math.abs(movement)}`);
+}
