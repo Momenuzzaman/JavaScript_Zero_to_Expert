@@ -109,3 +109,9 @@ for (const movement of movements) {
   movement > 0 ? console.log(`You deposit ${movement}`)
     : console.log(`You Withdrew ${Math.abs(movement)}`);
 }
+
+// forEach************************************************
+movements.forEach(function (movement, index) {
+  movement > 0 ? console.log(`Movement ${index + 1}: You deposit ${movement}`)
+    : console.log(`Movement ${index + 1}: You Withdrew ${Math.abs(movement)}`);
+});
