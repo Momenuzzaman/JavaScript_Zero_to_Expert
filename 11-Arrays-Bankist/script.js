@@ -109,11 +109,21 @@ const createUserName = (accs) => {
   });
 };
 createUserName(accounts);
-console.log(accounts);
 
+
+
+// Event handler
+
+let currentAccount;
+btnLogin.addEventListener('click', function (e) {
+  e.preventDefault();
+  currentAccount = accounts.find(account => account.userName === inputLoginUsername.value);
+  console.log(currentAccount);
+});
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+
 
 // const currencies = new Map([
 //   ['USD', 'United States dollar'],
@@ -229,14 +239,14 @@ console.log(accounts);
 
 
 // challenge 2
-const calcAverageHumanAge = (ages) => {
-  const humanAge = ages.map(age => {
-    return age <= 2 ? 2 * age : age * 4 + 16;
-  });
-  console.log(humanAge);
-  const adult = humanAge.filter(age => age > 18);
-  console.log(adult);
-  const avgAge = adult.reduce((total, age) => total + age, 0) / adult.length;
-  console.log(avgAge);
-};
-calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+// const calcAverageHumanAge = (ages) => {
+//   const humanAge = ages.map(age => {
+//     return age <= 2 ? 2 * age : age * 4 + 16;
+//   });
+//   console.log(humanAge);
+//   const adult = humanAge.filter(age => age > 18);
+//   console.log(adult);
+//   const avgAge = adult.reduce((total, age) => total + age, 0) / adult.length;
+//   console.log(avgAge);
+// };
+// calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
