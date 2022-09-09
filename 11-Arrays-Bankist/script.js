@@ -119,6 +119,12 @@ btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
   currentAccount = accounts.find(account => account.userName === inputLoginUsername.value);
   console.log(currentAccount);
+
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    console.log('login');
+  };
+  // welcome message 
+  labelWelcome.textContent = `Welcome back ${currentAccount.owner.split(' ')[0]}`;
 });
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
