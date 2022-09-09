@@ -77,6 +77,16 @@ const displayMovements = (movements) => {
 };
 
 displayMovements(account1.movements);
+
+const createUserName = (user) => {
+  const userName = user.toLowerCase()
+    .split(' ')
+    .map(word => word[0])
+    .join('');
+  return userName;
+};
+console.log(createUserName('Jonas Schmedtmann'));
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -149,20 +159,32 @@ displayMovements(account1.movements);
 //   console.log(currency);
 // });
 
-const checkDogs = (dogsJulia, dogsKate) => {
-  // const dogJuliaCorrect = dogsJulia.slice(1,3);
-  const dogJuliaCorrect = dogsJulia.slice();
-  dogJuliaCorrect.splice(0, 1);
-  dogJuliaCorrect.splice(-2);
+// challenge1******
 
-  const dogs = [...dogJuliaCorrect, ...dogsKate];
+// const checkDogs = (dogsJulia, dogsKate) => {
+//   // const dogJuliaCorrect = dogsJulia.slice(1,3);
+//   const dogJuliaCorrect = dogsJulia.slice();
+//   dogJuliaCorrect.splice(0, 1);
+//   dogJuliaCorrect.splice(-2);
 
-  dogs.forEach(function (dog, i) {
-    dog >= 3 ?
-      console.log(`Dog number ${i + 1} is an adult,and is ${dog} year old`)
-      : console.log(`dog number ${i + 1} is still puppy`);
-  });
+//   const dogs = [...dogJuliaCorrect, ...dogsKate];
 
-};
-checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
-checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
+//   dogs.forEach(function (dog, i) {
+//     dog >= 3 ?
+//       console.log(`Dog number ${i + 1} is an adult,and is ${dog} year old`)
+//       : console.log(`dog number ${i + 1} is still puppy`);
+//   });
+
+// };
+// checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+// checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
+
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// const eurToUsd = 1.1;
+// const movementUSD = movements.map(movement => {
+//   return movement * eurToUsd;
+// });
+
+// console.log(movementUSD);
