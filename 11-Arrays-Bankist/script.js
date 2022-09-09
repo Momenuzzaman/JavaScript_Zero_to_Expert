@@ -134,17 +134,29 @@ displayMovements(account1.movements);
 // });
 
 
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
+// const currencies = new Map([
+//   ['USD', 'United States dollar'],
+//   ['EUR', 'Euro'],
+//   ['GBP', 'Pound sterling'],
+// ]);
 
-currencies.forEach(function (currency, key) {
-  console.log(`${key} : ${currency}`);
-});
-const name = ['eur', 'usd', 'usd', 'eur', 'grb', 'grb'];
-const uniqueCurrencies = new Set(name);
-uniqueCurrencies.forEach(function (currency) {
-  console.log(currency);
-});
+// currencies.forEach(function (currency, key) {
+//   console.log(`${key} : ${currency}`);
+// });
+// const name = ['eur', 'usd', 'usd', 'eur', 'grb', 'grb'];
+// const uniqueCurrencies = new Set(name);
+// uniqueCurrencies.forEach(function (currency) {
+//   console.log(currency);
+// });
+
+const checkDogs = (dogsJulia, dogsKate) => {
+  // const dogJuliaCorrect = dogsJulia.slice(1,3);
+  const dogJuliaCorrect = dogsJulia.slice();
+  dogJuliaCorrect.splice(0, 1);
+  dogJuliaCorrect.splice(-2);
+  console.log(dogJuliaCorrect);
+  const dog = [...dogJuliaCorrect, ...dogsKate];
+  console.log(dog);
+
+};
+checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
