@@ -75,13 +75,19 @@ const displayMovements = (movements) => {
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
+displayMovements(account1.movements);
 const displayLabelBalance = (movements) => {
   const balance = movements.reduce((total, move) => total + move, 0);
   labelBalance.textContent = `${balance} EUR`;
 };
 displayLabelBalance(account1.movements);
 
-displayMovements(account1.movements);
+const CalDisplaySummary = (movements) => {
+  const income = movements.filter(movement => movement > 0)
+    .reduce((total, amount) => total + amount, 0);
+  labelSumIn.textContent = `${income}`;
+};
+CalDisplaySummary(account1.movements);
 
 const createUserName = (accs) => {
   accs.forEach(function (acc) {
@@ -211,22 +217,7 @@ console.log(accounts);
 // console.log(total);
 
 
-// const calcAverageHumanAge = (ages) => {
-//   let humanAge = 0;
-//   ages.map(age => {
-//     if (age <= 2) {
-//       humanAge = (age * 2);
-//       console.log(humanAge);
-//     }
-//     else if (age > 2) {
-//       humanAge = 16 + age * 4;
-//       console.log(humanAge);
-//     }
-//   });
-//   const avg = humanAge.reduce((total, age) => total + age, 0);
-//   console.log(avg);
-// };
-// calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+// challenge 2
 const calcAverageHumanAge = (ages) => {
   const humanAge = ages.map(age => {
     return age <= 2 ? 2 * age : age * 4 + 16;
