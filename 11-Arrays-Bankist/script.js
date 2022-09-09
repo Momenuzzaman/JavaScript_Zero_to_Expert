@@ -78,14 +78,25 @@ const displayMovements = (movements) => {
 displayMovements(account1.movements);
 const displayLabelBalance = (movements) => {
   const balance = movements.reduce((total, move) => total + move, 0);
-  labelBalance.textContent = `${balance} EUR`;
+  labelBalance.textContent = `${balance}€`;
 };
+
 displayLabelBalance(account1.movements);
 
 const CalDisplaySummary = (movements) => {
   const income = movements.filter(movement => movement > 0)
     .reduce((total, amount) => total + amount, 0);
-  labelSumIn.textContent = `${income}`;
+  labelSumIn.textContent = `${income}€`;
+
+  const out = movements.filter(movement => movement < 0)
+    .reduce((total, move) => total + move, 0);
+  labelSumOut.textContent = `${out}€`;
+
+  const interest = movements.filter(movement => movement > 0)
+    .map(movement => Math.round(movement * 1.10) / 100)
+    .reduce((total, move) => total + move, 0);
+
+  labelSumInterest.textContent = `${interest}€`;
 };
 CalDisplaySummary(account1.movements);
 
