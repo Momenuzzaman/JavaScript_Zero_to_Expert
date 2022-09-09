@@ -122,9 +122,11 @@ btnLogin.addEventListener('click', function (e) {
 
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     console.log('login');
-  };
+  }
   // welcome message 
   labelWelcome.textContent = `Welcome back ${currentAccount.owner.split(' ')[0]}`;
+
+  containerApp.style.opacity = 100;
 });
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
