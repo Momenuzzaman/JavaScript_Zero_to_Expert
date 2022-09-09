@@ -75,6 +75,11 @@ const displayMovements = (movements) => {
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
+const displayLabelBalance = (movements) => {
+  const balance = movements.reduce((total, move) => total + move, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+displayLabelBalance(account1.movements);
 
 displayMovements(account1.movements);
 
@@ -193,9 +198,14 @@ console.log(accounts);
 
 
 // filter******
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-const deposit = movements.filter(movement => movement > 0);
-console.log(deposit);
-const withdrawal = movements.filter(movement => 0 > movement);
-console.log(withdrawal);
+// // const deposit = movements.filter(movement => movement > 0);
+// // console.log(deposit);
+// // const withdrawal = movements.filter(movement => 0 > movement);
+// // console.log(withdrawal);
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// const total = movements.reduce((total, mov) => total + mov, 0);
+// console.log(total);
