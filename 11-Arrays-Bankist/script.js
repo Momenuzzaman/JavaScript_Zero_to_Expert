@@ -78,14 +78,16 @@ const displayMovements = (movements) => {
 
 displayMovements(account1.movements);
 
-const createUserName = (user) => {
-  const userName = user.toLowerCase()
-    .split(' ')
-    .map(word => word[0])
-    .join('');
-  return userName;
+const createUserName = (accs) => {
+  accs.forEach(function (acc) {
+    acc.userName = acc.owner.toLowerCase()
+      .split(' ')
+      .map(word => word[0])
+      .join('');
+  });
 };
-console.log(createUserName('Jonas Schmedtmann'));
+createUserName(accounts);
+console.log(accounts);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -188,3 +190,12 @@ console.log(createUserName('Jonas Schmedtmann'));
 // });
 
 // console.log(movementUSD);
+
+
+// filter******
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const deposit = movements.filter(movement => movement > 0);
+console.log(deposit);
+const withdrawal = movements.filter(movement => 0 > movement);
+console.log(withdrawal);
