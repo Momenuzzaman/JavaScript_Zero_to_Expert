@@ -112,13 +112,13 @@ createUserName(accounts);
 
 // updateUI
 
-const updateUI = () => {
+const updateUI = (acc) => {
   //display movements
-  displayMovements(currentAccount.movements);
+  displayMovements(acc.movements);
   // Display balance
-  displayLabelBalance(currentAccount);
+  displayLabelBalance(acc);
   // display summery
-  CalDisplaySummary(currentAccount);
+  CalDisplaySummary(acc);
 };
 
 // Event handler
@@ -133,12 +133,13 @@ btnLogin.addEventListener('click', function (e) {
     // welcome message 
     labelWelcome.textContent = `Welcome back ${currentAccount.owner.split(' ')[0]}`;
     containerApp.style.opacity = 100;
+    updateUI(currentAccount);
   }
   inputLoginUsername.value = '';
   inputLoginPin.value = '';
   inputLoginPin.blur();
 
-  updateUI();
+
   // transfer 
 
   btnTransfer.addEventListener("click", function (e) {
@@ -151,14 +152,26 @@ btnLogin.addEventListener('click', function (e) {
     if (amount > 0 && currentAccount.balance >= amount && receiveAcc?.userName !== currentAccount.userName) {
       currentAccount.movements.push(-amount);
       receiveAcc.movements.push(amount);
+      updateUI(currentAccount);
     }
     inputTransferAmount.value = '';
     inputTransferTo.value = '';
 
-    updateUI();
+
   });
 });
+// Request Loan 
+btnLoan.addEventListener('click', function (e) {
+  e.preventDefault();
+  const amount = Number(inputLoanAmount.value);
+  if (amount > 0 && currentAccount.movements.some(movement => movement >= amount * 0.1)) {
+    currentAccount.movements.push(amount);
+    updateUI(currentAccount);
+  }
+  inputLoanAmount.value = '';
+});
 
+// close Account 
 btnClose.addEventListener('click', function (e) {
   e.preventDefault();
 
@@ -302,3 +315,14 @@ btnClose.addEventListener('click', function (e) {
 //   console.log(avgAge);
 // };
 // calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+
+// flat 
+
+const totalBalance = accounts.map(account => account.movements)
+  .flat().reduce((total, movement) => total + movement, 0);
+console.log(totalBalance);
+
+// flatMap 
+const totalBalance2 = accounts.flatMap(account => account.movements)
+  .reduce((total, movement) => total + movement, 0);
+console.log(totalBalance2);
