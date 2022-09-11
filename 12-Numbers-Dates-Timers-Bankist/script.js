@@ -161,7 +161,8 @@ updateUI(account1);
 containerApp.style.opacity = 100;
 
 
-
+const now = new Date();
+labelDate.textContent = new Intl.DateTimeFormat('en-US').format(now);
 // Event handler
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
@@ -175,7 +176,7 @@ btnLogin.addEventListener('click', function (e) {
     updateUI(currentAccount);
   }
   // current date
-  const now = new Date();
+
   const day = `${now.getDate()}`.padStart(2, 0);
   const month = `${now.getMonth() + 1}`.padStart(2, 0);
   const year = now.getFullYear();
@@ -280,3 +281,12 @@ btnSort.addEventListener('click', function (e) {
 
 // console.log(new Date('November,06,1998'));
 // console.log(new Date(0));
+
+const future = new Date(2027, 10, 19, 15, 23);
+console.log(+future);
+
+const calDatPassed = (date1, date2) => {
+  return (date2 - date1) / (1000 * 60 * 60 * 24);
+};
+
+console.log(calDatPassed(new Date(2032, 3, 10), new Date(2032, 3, 14)));
