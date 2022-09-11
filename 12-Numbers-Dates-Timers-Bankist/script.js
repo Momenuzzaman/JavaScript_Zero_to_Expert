@@ -162,7 +162,17 @@ containerApp.style.opacity = 100;
 
 
 const now = new Date();
-labelDate.textContent = new Intl.DateTimeFormat('en-US').format(now);
+const optional = {
+  hour: 'numeric',
+  minute: 'numeric',
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  week: 'long'
+};
+labelDate.textContent = new Intl.DateTimeFormat('en-US', optional).format(now);
+
+
 // Event handler
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
