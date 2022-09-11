@@ -81,6 +81,15 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // Functions
 
+// internal currency
+const formateCur = (value, locale, currency) => {
+  return new Intl.NumberFormat(locale,
+    {
+      style: 'currency',
+      currency: currency
+    }).format(value);
+};
+
 const displayMovements = (acc, sort = false) => {
   containerMovements.innerHTML = '';
 
@@ -97,11 +106,13 @@ const displayMovements = (acc, sort = false) => {
 
     const displayDate = `${day}/${month}/${year}`;
 
+    const formatTedMov = formateCur(movement, acc.locale, acc.currency);
+
     const html = `
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">${index + 1} ${type}</div>
         <div class="movements__date">${displayDate}</div>
-        <div class="movements__value">${movement.toFixed(2)}</div>
+        <div class="movements__value">${formatTedMov}</div>
     </div>
 `;
     containerMovements.insertAdjacentHTML('afterbegin', html);
@@ -111,24 +122,28 @@ const displayMovements = (acc, sort = false) => {
 const displayLabelBalance = (acc) => {
   acc.balance = acc.movements.reduce((total, move) => total + move, 0);
   let balance = acc.balance;
-  labelBalance.textContent = `${balance.toFixed(2)}€`;
+  labelBalance.textContent = formateCur(balance, acc.locale, acc.currency);
+  `${balance.toFixed(2)}€`;
 };
 
 
 const CalDisplaySummary = (acc) => {
   const income = acc.movements.filter(movement => movement > 0)
     .reduce((total, amount) => total + amount, 0);
-  labelSumIn.textContent = `${income}€`;
+  labelSumIn.textContent = formateCur(income, acc.locale, acc.currency);
+
 
   const out = acc.movements.filter(movement => movement < 0)
     .reduce((total, move) => total + move, 0);
-  labelSumOut.textContent = `${out.toFixed(2)}€`;
+  labelSumOut.textContent = formateCur(out, acc.locale, acc.currency);
+
 
   const interest = acc.movements.filter(movement => movement > 0)
     .map(movement => Math.round(movement * 1.10) / 100)
     .reduce((total, move) => total + move, 0);
 
-  labelSumInterest.textContent = `${interest.toFixed(2)}€`;
+  labelSumInterest.textContent = formateCur(interest, acc.locale, acc.currency);
+
 };
 
 const createUserName = (accs) => {
@@ -152,26 +167,11 @@ const updateUI = (acc) => {
   CalDisplaySummary(acc);
 };
 
-
-
 // Fake Always logged in
 let currentAccount;
 currentAccount = account1;
 updateUI(account1);
 containerApp.style.opacity = 100;
-
-
-const now = new Date();
-const optional = {
-  hour: 'numeric',
-  minute: 'numeric',
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-  week: 'long'
-};
-labelDate.textContent = new Intl.DateTimeFormat('en-US', optional).format(now);
-
 
 // Event handler
 btnLogin.addEventListener('click', function (e) {
@@ -185,17 +185,32 @@ btnLogin.addEventListener('click', function (e) {
     containerApp.style.opacity = 100;
     updateUI(currentAccount);
   }
-  // current date
-
-  const day = `${now.getDate()}`.padStart(2, 0);
-  const month = `${now.getMonth() + 1}`.padStart(2, 0);
-  const year = now.getFullYear();
-  const hour = `${now.getHours()}`.padStart(2, 0);
-  const min = `${now.getMinutes()}`.padStart(2, 0);
-  labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
   inputLoginUsername.value = '';
   inputLoginPin.value = '';
   inputLoginPin.blur();
+
+  // current date
+
+  const now = new Date();
+  const optional = {
+    hour: 'numeric',
+    minute: 'numeric',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    week: 'long'
+  };
+  // const locale = navigator.language();
+  labelDate.textContent = new Intl.DateTimeFormat(currentAccount.locale, optional).format(now);
+  // const day = `${now.getDate()}`.padStart(2, 0);
+  // const month = `${now.getMonth() + 1}`.padStart(2, 0);
+  // const year = now.getFullYear();
+  // const hour = `${now.getHours()}`.padStart(2, 0);
+  // const min = `${now.getMinutes()}`.padStart(2, 0);
+  // labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+  // inputLoginUsername.value = '';
+  // inputLoginPin.value = '';
+  // inputLoginPin.blur();
 
   // transfer 
 
@@ -216,8 +231,6 @@ btnLogin.addEventListener('click', function (e) {
     }
     inputTransferAmount.value = '';
     inputTransferTo.value = '';
-
-
   });
 });
 
@@ -292,11 +305,24 @@ btnSort.addEventListener('click', function (e) {
 // console.log(new Date('November,06,1998'));
 // console.log(new Date(0));
 
-const future = new Date(2027, 10, 19, 15, 23);
-console.log(+future);
+// const future = new Date(2027, 10, 19, 15, 23);
+// console.log(+future);
 
-const calDatPassed = (date1, date2) => {
-  return (date2 - date1) / (1000 * 60 * 60 * 24);
+// const calDatPassed = (date1, date2) => {
+//   return (date2 - date1) / (1000 * 60 * 60 * 24);
+// };
+
+// console.log(calDatPassed(new Date(2032, 3, 10), new Date(2032, 3, 14)));
+
+const num = 2313231434;
+const options = {
+  style: 'unit',
+  unit: 'mile-per-hour'
 };
-
-console.log(calDatPassed(new Date(2032, 3, 10), new Date(2032, 3, 14)));
+const options2 = {
+  style: 'currency',
+  currency: 'EUR'
+}
+console.log('US', new Intl.NumberFormat('en-Us', options).format(num));
+console.log('Germany', new Intl.NumberFormat('de-DE', options2).format(num));
+console.log('Syria', new Intl.NumberFormat('ar-SY').format(num));
