@@ -239,9 +239,11 @@ btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
   const amount = Math.floor(inputLoanAmount.value);
   if (amount > 0 && currentAccount.movements.some(movement => movement >= amount * 0.1)) {
-    currentAccount.movements.push(amount);
-    currentAccount.movementsDates.push(new Date().toISOString());
-    updateUI(currentAccount);
+    setTimeout(() => {
+      currentAccount.movements.push(amount);
+      currentAccount.movementsDates.push(new Date().toISOString());
+      updateUI(currentAccount);
+    }, 2500);
   }
   inputLoanAmount.value = '';
 });
@@ -314,15 +316,23 @@ btnSort.addEventListener('click', function (e) {
 
 // console.log(calDatPassed(new Date(2032, 3, 10), new Date(2032, 3, 14)));
 
-const num = 2313231434;
-const options = {
-  style: 'unit',
-  unit: 'mile-per-hour'
-};
-const options2 = {
-  style: 'currency',
-  currency: 'EUR'
-}
-console.log('US', new Intl.NumberFormat('en-Us', options).format(num));
-console.log('Germany', new Intl.NumberFormat('de-DE', options2).format(num));
-console.log('Syria', new Intl.NumberFormat('ar-SY').format(num));
+// const num = 2313231434;
+// const options = {
+//   style: 'unit',
+//   unit: 'mile-per-hour'
+// };
+// const options2 = {
+//   style: 'currency',
+//   currency: 'EUR'
+// }
+// console.log('US', new Intl.NumberFormat('en-Us', options).format(num));
+// console.log('Germany', new Intl.NumberFormat('de-DE', options2).format(num));
+// console.log('Syria', new Intl.NumberFormat('ar-SY').format(num));
+// const ingredients = ['']
+const ingredients = ['olives', 'spinach'];
+const makePizza = setTimeout((ing1, ing2) => {
+  console.log(`Here is your pizza with ${ing1} and ${ing2}.`);
+}, 4000, ...ingredients);
+console.log('waiting.....');
+
+if (ingredients.includes('spinach')) clearTimeout(makePizza);
