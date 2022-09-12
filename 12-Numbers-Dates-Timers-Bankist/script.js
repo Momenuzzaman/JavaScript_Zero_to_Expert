@@ -168,22 +168,34 @@ const updateUI = (acc) => {
 };
 
 const startLogOutTimer = () => {
-  // set time to 5 minutes
-  let time = 100;
-  // call the time every second
-  setInterval(() => {
+
+  const trick = () => {
+    const min = String(Math.trunc(time / 60)).padStart(2, 0);
+    const sec = String(time % 60).padStart(2, 0);
     // In each call, the remaining time to UI 
-    labelTimer.textContent = time;
+    labelTimer.textContent = `${min} ${sec}`;
+
+    if (time === 0) {
+      clearInterval(timer);
+      labelWelcome.textContent = `Log in to get started`;
+      containerApp.style.opacity = 0;
+    }
     // When 0 seconds, stop time and log out user 
     time--;
-  }, 1000);
+  };
+  // set time to 5 minutes
+  let time = 10;
+  trick();
+  // call the time every second
+  const timer = setInterval(trick, 1000);
+  return timer;
 };
 
 // Fake Always logged in
-let currentAccount;
-currentAccount = account1;
-updateUI(account1);
-containerApp.style.opacity = 100;
+let currentAccount, timer;
+// currentAccount = account1;
+// updateUI(account1);
+// containerApp.style.opacity = 100;
 
 // Event handler
 btnLogin.addEventListener('click', function (e) {
@@ -196,7 +208,8 @@ btnLogin.addEventListener('click', function (e) {
     labelWelcome.textContent = `Welcome back ${currentAccount.owner.split(' ')[0]}`;
     containerApp.style.opacity = 100;
   }
-  startLogOutTimer();
+  if (timer) clearInterval(timer);
+  timer = startLogOutTimer();
   updateUI(currentAccount);
   inputLoginUsername.value = '';
   inputLoginPin.value = '';
