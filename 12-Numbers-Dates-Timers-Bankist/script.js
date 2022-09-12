@@ -167,6 +167,18 @@ const updateUI = (acc) => {
   CalDisplaySummary(acc);
 };
 
+const startLogOutTimer = () => {
+  // set time to 5 minutes
+  let time = 100;
+  // call the time every second
+  setInterval(() => {
+    // In each call, the remaining time to UI 
+    labelTimer.textContent = time;
+    // When 0 seconds, stop time and log out user 
+    time--;
+  }, 1000);
+};
+
 // Fake Always logged in
 let currentAccount;
 currentAccount = account1;
@@ -183,8 +195,9 @@ btnLogin.addEventListener('click', function (e) {
     // welcome message 
     labelWelcome.textContent = `Welcome back ${currentAccount.owner.split(' ')[0]}`;
     containerApp.style.opacity = 100;
-    updateUI(currentAccount);
   }
+  startLogOutTimer();
+  updateUI(currentAccount);
   inputLoginUsername.value = '';
   inputLoginPin.value = '';
   inputLoginPin.blur();
@@ -245,6 +258,7 @@ btnLoan.addEventListener('click', function (e) {
       updateUI(currentAccount);
     }, 2500);
   }
+
   inputLoanAmount.value = '';
 });
 
@@ -329,10 +343,20 @@ btnSort.addEventListener('click', function (e) {
 // console.log('Germany', new Intl.NumberFormat('de-DE', options2).format(num));
 // console.log('Syria', new Intl.NumberFormat('ar-SY').format(num));
 // const ingredients = ['']
-const ingredients = ['olives', 'spinach'];
-const makePizza = setTimeout((ing1, ing2) => {
-  console.log(`Here is your pizza with ${ing1} and ${ing2}.`);
-}, 4000, ...ingredients);
-console.log('waiting.....');
 
-if (ingredients.includes('spinach')) clearTimeout(makePizza);
+// setTimeout
+// const ingredients = ['olives', 'spinach'];
+// const makePizza = setTimeout((ing1, ing2) => {
+//   console.log(`Here is your pizza with ${ing1} and ${ing2}.`);
+// }, 4000, ...ingredients);
+// console.log('waiting.....');
+
+// // clearTimeout
+// if (ingredients.includes('spinach')) clearTimeout(makePizza);
+
+// // setInterval
+
+// setInterval(() => {
+//   const now = new Date();
+//   console.log(now);
+// }, 2000);
