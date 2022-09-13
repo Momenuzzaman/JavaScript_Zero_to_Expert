@@ -59,10 +59,21 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
+// Tabbed component
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabContent = document.querySelectorAll('.operations__content');
 
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.operations__tab');
+  console.log(clicked);
+
+  if (!clicked) return;
+  tabs.forEach(tab => tab.classList.remove('operations__tab--active'));
+  clicked.classList.add('operations__tab--active');
+});
 // ///////////////////////////////////////////////////////////////
 // ///////////////////////////////////////////////////////////////
-
 
 
 // Selecting elements
@@ -116,4 +127,11 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 // const logo = document.querySelector('.nav__logo');
 // console.log(logo.alt);
 // console.log(logo.src);
+
+const h1 = document.querySelector('h1');
+
+h1.firstElementChild.style.color = 'white';
+h1.lastElementChild.style.color = 'gray';
+
+h1.closest('.header').style.background = 'rad';
 
