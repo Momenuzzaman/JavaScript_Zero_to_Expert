@@ -125,6 +125,10 @@ allSection.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add('section--hidden');
 });
+
+// Lazy loading images
+const imgTargets = document.querySelectorAll('img[data-src]');
+
 // ///////////////////////////////////////////////////////////////
 // ///////////////////////////////////////////////////////////////
 
@@ -186,5 +190,5 @@ allSection.forEach(function (section) {
 // h1.firstElementChild.style.color = 'white';
 // h1.lastElementChild.style.color = 'gray';
 
-h1.closest('.header').style.background = 'rad';
+// h1.closest('.header').style.background = 'rad';
 
