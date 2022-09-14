@@ -99,11 +99,32 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 // sticky navigation
 const initialCoords = section1.getBoundingClientRect();
 window.addEventListener('scroll', function () {
-
   if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
   else nav.classList.remove('sticky');
 });
 
+
+// Reveal Section
+
+const allSection = document.querySelectorAll('section');
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15
+});
+
+allSection.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden');
+});
 // ///////////////////////////////////////////////////////////////
 // ///////////////////////////////////////////////////////////////
 
