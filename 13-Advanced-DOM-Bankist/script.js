@@ -131,12 +131,21 @@ const imgTargets = document.querySelectorAll('img[data-src]');
 
 const loading = function (entries, observer) {
   const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.src = entry.target.dataset.src;
+  entry.target.classList.remove('lazy-img');
+
+  entry.target.addEventListener('load', function () {
+
+  });
 };
 const imgObserver = new IntersectionObserver(loading, {
   root: null,
   threshold: 0
 });
-imgTargets.forEach(img => imgObserver(img));
+imgTargets.forEach(img => imgObserver.observe(img));
 // ///////////////////////////////////////////////////////////////
 // ///////////////////////////////////////////////////////////////
 
