@@ -44,22 +44,22 @@
 // mercedes.brake();
 // mercedes.accelerate();
 
-class Person {
-    constructor(name, birthYear) {
-        this.name = name;
-        this.birthYear = birthYear;
-    }
-    calAge() {
-        console.log(2022 - this.birthYear);
-    }
-    greet() {
-        console.log(`My name is ${this.name}`);
-    }
-}
-const liton = new Person('Liton', 1984);
-const emon = new Person('Emon', 1998);
+// class Person {
+//     constructor(name, birthYear) {
+//         this.name = name;
+//         this.birthYear = birthYear;
+//     }
+//     calAge() {
+//         console.log(2022 - this.birthYear);
+//     }
+//     greet() {
+//         console.log(`My name is ${this.name}`);
+//     }
+// }
+// const liton = new Person('Liton', 1984);
+// const emon = new Person('Emon', 1998);
 
-console.log(emon, liton);
-emon.calAge();
-emon.greet();
+// console.log(emon, liton);
+// emon.calAge();
+// emon.greet();
 
