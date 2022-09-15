@@ -25,7 +25,19 @@ const mercedes = new Car('Mercedes', 95);
 
 Car.prototype.accelerate = function () {
     this.speed += 10;
-    console.log(`${this.car} speed of the car in ${this.speed} km/h`);
+    console.log(`${this.make} speed of the car in ${this.speed} km/h`);
+};
+Car.prototype.brake = function () {
+    this.speed -= 5;
+    console.log(`${this.make} speed of the car in ${this.speed} km/h`);
 };
 bmw.accelerate();
 bmw.accelerate();
+bmw.brake();
+bmw.accelerate();
+console.log("----------");
+mercedes.accelerate();
+mercedes.accelerate();
+mercedes.accelerate();
+mercedes.brake();
+mercedes.accelerate();
