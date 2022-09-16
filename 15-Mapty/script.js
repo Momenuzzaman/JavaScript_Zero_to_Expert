@@ -13,8 +13,20 @@ const inputElevation = document.querySelector('.form__input--elevation');
 
 let map, mapEvent;
 
-if (navigator.geolocation)
-    navigator.geolocation.getCurrentPosition(function (position) {
+class App {
+    constructor() {
+        this._getPosition();
+    }
+    _getPosition() {
+        if (navigator.geolocation)
+            navigator.geolocation.getCurrentPosition(this._loadMap,
+                function () {
+                    alert('Could not get your position');
+                }
+            );
+    }
+
+    _loadMap(position) {
         const { latitude } = position.coords;
         const { longitude } = position.coords;
         console.log(`https://www.google.com/maps/@${latitude},${longitude}`);
@@ -32,11 +44,16 @@ if (navigator.geolocation)
             form.classList.remove('hidden');
             inputDistance.focus();
         });
-    },
-        function () {
-            alert('Could not get your position');
-        }
-    );
+    }
+
+    _showMap() { }
+
+    _toggleEventField() { }
+
+    _newWorkout() { }
+}
+
+
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     // Clear input fields
@@ -56,4 +73,9 @@ form.addEventListener('submit', function (e) {
         )
         .setPopupContent('Workout')
         .openPopup();
+});
+
+inputType.addEventListener('change', function () {
+    inputElevation.closest('.form__row').classList.toggle('form__row--hidden');
+    inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
 });
