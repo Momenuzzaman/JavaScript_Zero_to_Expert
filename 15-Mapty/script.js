@@ -14,7 +14,7 @@ const inputElevation = document.querySelector('.form__input--elevation');
 let map, mapEvent;
 class Workout {
     date = new Date();
-    id = (new Date() + '').slice(-10);
+    id = (Date.now() + '').slice(-10);
     constructor(coords, distance, duration) {
         this.coords = coords;
         this.distance = distance; // in time
@@ -36,8 +36,15 @@ class Cycling extends Workout {
     constructor(coords, distance, duration, elevationGain) {
         super(coords, distance, duration);
         this.elevationGain = elevationGain;
+        this.calSpeed();
+    }
+    calSpeed() {
+        this.speed = this.distance / this.duration / 60;
+        return this.speed;
     }
 }
+
+// const run1 = new Running();
 class App {
     #map
     #mapEvent
