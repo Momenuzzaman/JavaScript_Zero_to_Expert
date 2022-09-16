@@ -39,7 +39,9 @@ if (navigator.geolocation)
     );
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    // display maker
+    // Clear input fields
+    inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
+    // display maker 
     console.log(mapEvent);
     const { lat, lng } = mapEvent.latlng;
 
