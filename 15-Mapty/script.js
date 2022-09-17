@@ -109,9 +109,14 @@ class App {
         // if working running ,create running object
         if (type === 'running') {
             const cadence = +inputCadence.value;
+            const allPositive = (...inputs) => inputs.every(input => input > 0);
             // check if data is valid
             if (
-                !validatedInputs(distance, duration, cadence)
+                // !Number.isFinite(distance) ||
+                // !Number.isFinite(duration) ||
+                // !number.isFinite(cadence)
+                !validatedInputs(distance, duration, cadence) ||
+                !allPositive(distance, duration, cadence)
             ) {
                 return alert('Input have to be positive number!');
             };
@@ -122,7 +127,8 @@ class App {
             const elevation = +inputElevation.value;
 
             if (
-                !validatedInputs(distance, duration, elevation)
+                !validatedInputs(distance, duration, elevation) ||
+                !allPositive(distance, duration, elevation)
             ) {
                 return alert('Input have to be positive number!');
             };
