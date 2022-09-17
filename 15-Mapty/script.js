@@ -111,9 +111,7 @@ class App {
             const cadence = +inputCadence.value;
             // check if data is valid
             if (
-                !Number.isFinite(distance) ||
-                !Number.isFinite(duration) ||
-                !number.isFinite(cadence)
+                !validatedInputs(distance, duration, cadence)
             ) {
                 return alert('Input have to be positive number!');
             };
@@ -122,6 +120,12 @@ class App {
         // if workout cycling ,create cycling object
         if (type === 'running') {
             const elevation = +inputElevation.value;
+
+            if (
+                !validatedInputs(distance, duration, elevation)
+            ) {
+                return alert('Input have to be positive number!');
+            };
         }
         // Add new object to workout
 
