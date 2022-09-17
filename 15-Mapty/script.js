@@ -96,16 +96,33 @@ class App {
     }
 
     _newWorkout(e) {
+        const validatedInputs = (...inputs) => inputs.every(input => Number.isFinite(input));
         e.preventDefault();
 
         // get data from form 
         const type = inputType.value;
-        const distance = inputDistance.value;
-        const duration = inputDuration.value;
-        // check if data is valid
+        const distance = +inputDistance.value;
+        const duration = +inputDuration.value;
+
+
 
         // if working running ,create running object
+        if (type === 'running') {
+            const cadence = +inputCadence.value;
+            // check if data is valid
+            if (
+                !Number.isFinite(distance) ||
+                !Number.isFinite(duration) ||
+                !number.isFinite(cadence)
+            ) {
+                return alert('Input have to be positive number!');
+            };
+        }
 
+        // if workout cycling ,create cycling object
+        if (type === 'running') {
+            const elevation = +inputElevation.value;
+        }
         // Add new object to workout
 
         // Render workout to workout array
