@@ -3,13 +3,7 @@
 // prettier-ignore
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-const form = document.querySelector('.form');
-const containerWorkouts = document.querySelector('.workouts');
-const inputType = document.querySelector('.form__input--type');
-const inputDistance = document.querySelector('.form__input--distance');
-const inputDuration = document.querySelector('.form__input--duration');
-const inputCadence = document.querySelector('.form__input--cadence');
-const inputElevation = document.querySelector('.form__input--elevation');
+
 
 let map, mapEvent;
 class Workout {
@@ -45,6 +39,16 @@ class Cycling extends Workout {
 }
 
 // const run1 = new Running();
+
+const form = document.querySelector('.form');
+const containerWorkouts = document.querySelector('.workouts');
+const inputType = document.querySelector('.form__input--type');
+const inputDistance = document.querySelector('.form__input--distance');
+const inputDuration = document.querySelector('.form__input--duration');
+const inputCadence = document.querySelector('.form__input--cadence');
+const inputElevation = document.querySelector('.form__input--elevation');
+
+
 class App {
     #map
     #mapEvent
@@ -93,13 +97,19 @@ class App {
 
     _newWorkout(e) {
         e.preventDefault();
-        console.log(this);
-        // Clear input fields
-        inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
-        // display maker 
-        console.log(this.#mapEvent);
-        const { lat, lng } = this.#mapEvent.latlng;
 
+        // get data from form 
+        const type = inputType.value;
+        const distance = inputDistance.value;
+        const duration = inputDuration.value;
+        // check if data is valid
+
+        // if working running ,create running object
+
+        // Add new object to workout
+
+        // Render workout to workout array
+        const { lat, lng } = this.#mapEvent.latlng;
         L.marker({ lat, lng }).addTo(this.#map)
             .bindPopup(L.popup({
                 maxWidth: 250,
@@ -111,6 +121,16 @@ class App {
             )
             .setPopupContent('Workout')
             .openPopup();
+        // Render workout on list
+
+
+
+        console.log(this);
+        // Clear input fields
+        inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
+        // display maker 
+        console.log(this.#mapEvent);
+
     }
 }
 
