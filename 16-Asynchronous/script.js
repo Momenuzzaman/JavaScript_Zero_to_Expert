@@ -38,13 +38,13 @@ const createImage = function (imgPath) {
     });
 };
 let currentImg;
-createImage('img/img-1.jpg')
-    .then(img => {
-        currentImg = img;
-        console.log(img);
-        return wait(2);
-    })
-    .then(() => {
-        currentImg.style.display = 'none';
-    })
-    .catch(err => console.error(err));
+// createImage('img/img-1.jpg')
+//     .then(img => {
+//         currentImg = img;
+//         console.log(img);
+//         return wait(2);
+//     })
+//     .then(() => {
+//         currentImg.style.display = 'none';
+//     })
+//     .catch(err => console.error(err));
