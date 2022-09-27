@@ -13,9 +13,38 @@ const countriesContainer = document.querySelector('.countries');
 // });
 // console.log("test end");
 
-const getPosition = function () {
+// const getPosition = function () {
+//     return new Promise(function (resolve, reject) {
+//         navigator.geolocation.getCurrentPosition(resolve, reject);
+//     });
+// };
+// getPosition().then(pos => console.log(pos));
+
+const imgContainer = document.querySelector('.images');
+
+const createImage = function (imgPath) {
     return new Promise(function (resolve, reject) {
-        navigator.geolocation.getCurrentPosition(resolve, reject);
+        const img = document.createElement('img');
+        img.src = imgPath;
+
+        img.addEventListener('load', function () {
+            imgContainer.appendChild(img);
+            resolve(img);
+        });
+
+        img.addEventListener('error', function () {
+            reject(new Error('Image not found'));
+        });
     });
 };
-getPosition().then(pos => console.log(pos));
+let currentImg;
+createImage('img/img-1.jpg')
+    .then(img => {
+        currentImg = img;
+        console.log(img);
+        return wait(2);
+    })
+    .then(() => {
+        currentImg.style.display = 'none';
+    })
+    .catch(err => console.error(err));
